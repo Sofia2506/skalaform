@@ -1,0 +1,133 @@
+.formulario__pagina1{
+    display: flex;
+    justify-content: center;
+}
+.barra{
+    height: 120px;
+}
+.form{
+    &__label{
+        grid-column: 1;
+    }
+    &__input{
+        grid-column: 2;
+        border-radius: 5px;
+        height: 40px;
+        width: 400px;
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        outline: none;
+        &:-webkit-autofill{
+            background: rgba(255, 255, 255, 0.15) !important;
+
+        }
+    }
+    &__boton{
+        font-family: $text-font;
+        background: none;
+        border: none;
+        padding: 8px 0;
+        width: 90px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    &__subs{
+        grid-column: 1/3;
+        &:nth-child(1){
+            margin-bottom: 0px;
+        }
+    }
+    &__opcion{
+        background: black;
+        color: white;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+}
+select:focus{ outline: none;}
+.boton--left{
+    border-left: 2px solid #FFFFFF;
+    justify-self: end;
+    right: 7.5%;
+}
+.boton--right{
+    justify-self: first baseline;
+    border-right: 2px solid #FFFFFF;
+    left: 7.5%;
+/*     visibility: hidden;
+ */}
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+.personales__form{
+    display: grid;
+    grid-template-columns: repeat(1 fr, 3);
+    align-items: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 35px;
+}
+.input3{
+    grid-column: 3;
+}
+.facturacion{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    &__imagen{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    &__formulario{
+        display: grid;
+        grid-template-columns: repeat(1 fr, 2);
+        grid-template-rows: repeat(1 fr, 4);
+        align-items: center;
+        grid-column-gap: 30px;
+        grid-row-gap: 35px;
+    }
+}
+.boton{
+    font-size: 20px;
+    padding: 10px 0px;
+    justify-content: center;
+}
+.ultimo__form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.ultimo1{
+    display: grid;
+    grid-template-columns: repeat(1 fr, 2);
+    align-items: center;
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+    
+}
+.ultimo2{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 920px){
+    .facturacion{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .personales__form{
+        grid-template-columns: repeat(1 fr, 2);
+    }
+    .input3{
+        grid-column: 2;
+    }
+    .ultimo__form{
+        flex-direction: column;
+    }
+}
