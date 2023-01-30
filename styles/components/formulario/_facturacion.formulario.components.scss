@@ -70,13 +70,14 @@ select:focus{ outline: none;}
 .boton--right{
     border-right: 2px solid #FFFFFF;
     left: 7.5%;
-/*     visibility: hidden;
- */}
+    visibility: hidden;
+}
 .botones{
     display: flex;
     justify-content: space-between;
     margin-top: 45px;
     margin-bottom: 30px;
+    align-items: center;
 }
 .personales__form{
     display: grid;
@@ -110,6 +111,13 @@ select:focus{ outline: none;}
     font-size: 20px;
     padding: 10px 0px;
     justify-content: center;
+}
+.boton--form{
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    font-size: 20px;
 }
 
 .ultimo__form{

@@ -19,7 +19,7 @@
         <div class="paso facturacion">
             <div class="facturacion__imagen">
                 <img src="img/deposito.png" id="pago-imagen" class="form__img">
-                <a class="inscripcion__boton boton" onclick="imprimir()">Sube tu comprobante</a>
+                <a class="inscripcion__boton boton">Sube tu comprobante</a>
             </div>
             <form class="facturacion__formulario">
                 <label class="form__label">Modalidad de pago</label> 
@@ -98,9 +98,10 @@
             </form>
         </div>
     </div>
-    <div class="botones">
-        <input type="button" value="Anterior" class="form__boton boton--right" onclick="anterior()">
-        <input type="button" value="Siguiente" class="form__boton boton--left" onclick="siguiente()">
+    <div class="botones" id="botones">
+        <input id="anterior" type="button" value="Anterior" class="form__boton boton--right" onclick="anterior()">
+        <a id="enviar" class="inscripcion__boton boton--form">Enviar</a>
+        <input id="siguiente" type="button" value="Siguiente" class="form__boton boton--left" onclick="siguiente()">
     </div>
     <script src="ajax.js"></script>
     <script src="prueba.js"></script>
