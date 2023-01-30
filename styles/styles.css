@@ -2387,6 +2387,11 @@ hr {
   justify-content: center;
   position: relative;
 }
+.form__boton:hover {
+  background: #FFF;
+  opacity: 0.1;
+  transition: all 0.3s;
+}
 .form__subs {
   grid-column: 1/3;
 }
@@ -2401,6 +2406,9 @@ hr {
   background-color: white;
   color: black;
 }
+.form__img {
+  height: 280px;
+}
 
 select:focus {
   outline: none;
@@ -2408,12 +2416,14 @@ select:focus {
 
 .boton--left {
   border-left: 2px solid #FFFFFF;
-  justify-self: end;
   right: 7.5%;
+}
+.boton--left :hover {
+  border-left: 0;
+  border-right: 2px solid #FFFFFF;
 }
 
 .boton--right {
-  justify-self: first baseline;
   border-right: 2px solid #FFFFFF;
   left: 7.5%;
   /*     visibility: hidden;
@@ -2423,6 +2433,7 @@ select:focus {
 .botones {
   display: flex;
   justify-content: space-between;
+  margin-top: 45px;
 }
 
 .personales__form {
@@ -2497,4 +2508,32 @@ select:focus {
   .ultimo__form {
     flex-direction: column;
   }
+}
+.carro {
+  display: flex;
+  width: 400vw;
+  position: relative;
+}
+
+.paso {
+  width: 100vw;
+}
+
+/*PRUEBA*/
+.cuerpo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carrusel {
+  display: flex;
+  width: 65px;
+  overflow-x: hidden;
+}
+
+.pre {
+  margin: 20px;
+  width: 100px;
 }/*# sourceMappingURL=styles.css.map */
