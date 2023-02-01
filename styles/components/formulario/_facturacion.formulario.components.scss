@@ -1,11 +1,16 @@
-.formulario__pagina1{
-    display: flex;
-    justify-content: center;
-}
 .barra{
     height: 120px;
 }
 .form{
+    display: flex;
+    width: 400vw;
+    position: relative;
+    transition: .5s all ease;
+    &__seccion{
+        width: 100vw;
+        transition: .5s all ease;
+        @include justificar(space-around);
+    }
     &__label{
         grid-column: 1;
     }
@@ -20,23 +25,9 @@
         outline: none;
         &:-webkit-autofill{
             background: rgba(255, 255, 255, 0.15) !important;
-
         }
-    }
-    &__boton{
-        font-family: $text-font;
-        background: none;
-        border: none;
-        padding: 8px 0;
-        width: 90px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        &:hover{
-            background: #FFF;
-            opacity: 0.1;
-            transition: all 0.3s;
-
+        &::placeholder{
+            color: #ffffff9c;
         }
     }
     &__subs{
@@ -47,123 +38,118 @@
     }
     &__opcion{
         background: black;
-        color: white;
+        color: $blanco;
         &:hover{
-            background-color: white;
+            background: $blanco;
             color: black;
         }
     }
     &__img{
         height: 280px;
     }
+    &__boton{
+        font-family: $text-font;
+        background: none;
+        padding: 8px 0;
+        width: 90px;
+        @include justificar(center);
+        position: relative;
+        
+        &::before{
+            position:absolute;
+            width: 2px;
+            height: 100%;
+            top: 0px;
+            content: '';
+            background: #FFF;
+            opacity:1;
+            transition: all 0.3s;
+        }
+        &:hover::before{
+            width: 100%;
+            opacity: 0.3;
+        }
+    }
 }
-select:focus{ outline: none;}
-.boton--left{
-    border-left: 2px solid #FFFFFF;
-    right: 7.5%;
-    :hover{
-        border-left: 0;
-        border-right: 2px solid #FFFFFF;
+.form__input[type=date]::-webkit-calendar-picker-indicator{
+    color: $blanco;
+}
 
+//modificadores
+.input3{
+    grid-column: 3;
+}
+.label--margin{
+    margin-bottom: 10px;
+}
+.input--margin{
+    margin-bottom: 20px;
+}
+.form{
+    font-family: $parrafo;
+}
+//estructuración
+.facturacion{
+    &__imagen{
+        display: flex;
+        flex-direction: column;
+    }
+    &__form{
+        @include grillaForm(2);
+    }
+}
+.personales__form{
+    @include grillaForm(3);
+}
+
+//botones
+.boton--form{
+    font-size: 20px;
+    padding: 10px 0px;
+    @include justificar(center);
+}
+.boton--enviar{
+    width: 180px;
+    visibility: hidden;
+}
+.boton--left{
+    right: 7.5%;
+    &::before{
+        left: 0px;
     }
 }
 .boton--right{
-    border-right: 2px solid #FFFFFF;
     left: 7.5%;
     visibility: hidden;
+    &::before{
+        right: 0px;
+    }
 }
 .botones{
-    display: flex;
-    justify-content: space-between;
+    @include justificar(space-between);
     margin-top: 45px;
     margin-bottom: 30px;
     align-items: center;
 }
-.personales__form{
-    display: grid;
-    grid-template-columns: repeat(1 fr, 3);
-    align-items: center;
-    grid-column-gap: 30px;
-    grid-row-gap: 35px;
-}
-.input3{
-    grid-column: 3;
-}
-.facturacion{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    &__imagen{
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-    }
-    &__formulario{
-        display: grid;
-        grid-template-columns: repeat(1 fr, 2);
-        grid-template-rows: repeat(1 fr, 4);
-        align-items: center;
-        grid-column-gap: 30px;
-        grid-row-gap: 35px;
-    }
-}
-.boton{
-    font-size: 20px;
-    padding: 10px 0px;
-    justify-content: center;
-}
-.boton--form{
-    width: 180px;
-    display: flex;
-    justify-content: center;
-    visibility: hidden;
-    font-size: 20px;
-}
 
-.ultimo__form{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-}
-.ultimo1{
-    display: grid;
-    grid-template-columns: repeat(1 fr, 2);
-    align-items: center;
-    grid-column-gap: 35px;
-    grid-row-gap: 35px;
-    
-}
-.ultimo2{
-    display: flex;
-    flex-direction: column;
-}
-.carro{
-    display: flex;
-    width: 400vw;
-    position: relative;
-    transition: .5s all ease;
-
-}
-.paso{
-    width: 100vw;
-    transition: .5s all ease;
-}
+//RESPONSIVE
 @media screen and (max-width: 920px){
-    .facturacion{
-        flex-direction: column-reverse;
-        align-items: center;
-    }
     .personales__form{
         grid-template-columns: repeat(1 fr, 2);
     }
     .input3{
         grid-column: 2;
     }
-    .ultimo__form{
+}
+@media screen and (max-width: 630px){
+    .facturacion__form{
+        display: flex;
         flex-direction: column;
+        grid-row-gap: 20px;
+        align-items: baseline;
+        margin-top: 30px;
+    }
+    .form__input{
+        width: 350px;
     }
 }
-
-

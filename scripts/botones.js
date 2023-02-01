@@ -1,5 +1,5 @@
 var cant = 0;
-var pregunta = document.getElementsByClassName("paso");
+var pregunta = document.getElementsByClassName("form__seccion");
 var antes = document.getElementById("anterior");
 var next = document.getElementById("siguiente");
 var enviar = document.getElementById("enviar");

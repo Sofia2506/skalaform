@@ -202,6 +202,7 @@ h2 {
 a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 body {
@@ -224,10 +225,6 @@ h4, h5 {
 p {
   font-family: "PoiretOne";
   font-size: 1.25rem;
-}
-
-form {
-  font-family: "PoiretOne";
 }
 
 img {
@@ -273,14 +270,6 @@ input, select {
 }
 .pointer {
   cursor: pointer;
-}
-
-.label--margin {
-  margin-bottom: 10px;
-}
-
-.input--margin {
-  margin-bottom: 20px;
 }
 
 .bloque1 {
@@ -1660,78 +1649,6 @@ input, select {
     font-size: 18px;
   }
 }
-.mantenimiento {
-  background-image: url("../img/mantenimientopc.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (max-width: 650px) {
-  .mantenimiento {
-    background-image: url("../img/mantenimiento-cel.webp");
-  }
-}
-.portada {
-  background-image: url("../img/talleres/fondo portada.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 720px;
-  width: 100%;
-  margin: 0;
-}
-.portada--limitador {
-  background-image: url("../img/talleres/fondo portada persona.png");
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-}
-
-.portada--verano {
-  height: 100vh;
-}
-
-.home {
-  margin: 10px;
-}
-
-.titulo__texto--talleres {
-  margin-left: 20px;
-  padding-left: 30px;
-}
-
-hr {
-  width: 90%;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-@media screen and (max-width: 480px) {
-  .portada {
-    background-image: url("../img/talleres/portada-talleres-celular.png");
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-  }
-  .titulo--talleres {
-    position: absolute;
-    margin-bottom: 15px;
-    bottom: 0;
-    width: 100%;
-  }
-  .titulo__texto--talleres {
-    text-align: center;
-  }
-  .titulo__subtitulo1--talleres {
-    display: flex;
-    justify-content: center;
-  }
-}
 .simbolo {
   border-radius: 100%;
   position: relative;
@@ -2352,15 +2269,94 @@ hr {
     margin-top: 30px;
   }
 }
-.formulario__pagina1 {
-  display: flex;
-  justify-content: center;
+.mantenimiento {
+  background-image: url("../img/mantenimientopc.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+@media screen and (max-width: 650px) {
+  .mantenimiento {
+    background-image: url("../img/mantenimiento-cel.webp");
+  }
+}
+.portada {
+  background-image: url("../img/talleres/fondo portada.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 720px;
+  width: 100%;
+  margin: 0;
+}
+.portada--limitador {
+  background-image: url("../img/talleres/fondo portada persona.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.portada--verano {
+  height: 100vh;
+}
+
+.home {
+  margin: 10px;
+}
+
+.titulo__texto--talleres {
+  margin-left: 20px;
+  padding-left: 30px;
+}
+
+hr {
+  width: 90%;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .portada {
+    background-image: url("../img/talleres/portada-talleres-celular.png");
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+  }
+  .titulo--talleres {
+    position: absolute;
+    margin-bottom: 15px;
+    bottom: 0;
+    width: 100%;
+  }
+  .titulo__texto--talleres {
+    text-align: center;
+  }
+  .titulo__subtitulo1--talleres {
+    display: flex;
+    justify-content: center;
+  }
+}
 .barra {
   height: 120px;
 }
 
+.form {
+  display: flex;
+  width: 400vw;
+  position: relative;
+  transition: 0.5s all ease;
+}
+.form__seccion {
+  width: 100vw;
+  transition: 0.5s all ease;
+  display: flex;
+  justify-content: space-around;
+}
 .form__label {
   grid-column: 1;
 }
@@ -2377,20 +2373,14 @@ hr {
 .form__input:-webkit-autofill {
   background: rgba(255, 255, 255, 0.15) !important;
 }
-.form__boton {
-  font-family: "PoiretOne";
-  background: none;
-  border: none;
-  padding: 8px 0;
-  width: 90px;
-  display: flex;
-  justify-content: center;
-  position: relative;
+.form__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
 }
-.form__boton:hover {
-  background: #FFF;
-  opacity: 0.1;
-  transition: all 0.3s;
+.form__input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+}
+.form__input::placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
 }
 .form__subs {
   grid-column: 1/3;
@@ -2400,41 +2390,69 @@ hr {
 }
 .form__opcion {
   background: black;
-  color: white;
+  color: #ffffff;
 }
 .form__opcion:hover {
-  background-color: white;
+  background: #ffffff;
   color: black;
 }
 .form__img {
   height: 280px;
 }
-
-select:focus {
-  outline: none;
-}
-
-.boton--left {
-  border-left: 2px solid #FFFFFF;
-  right: 7.5%;
-}
-.boton--left :hover {
-  border-left: 0;
-  border-right: 2px solid #FFFFFF;
-}
-
-.boton--right {
-  border-right: 2px solid #FFFFFF;
-  left: 7.5%;
-  visibility: hidden;
-}
-
-.botones {
+.form__boton {
+  font-family: "PoiretOne";
+  background: none;
+  padding: 8px 0;
+  width: 90px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 45px;
-  margin-bottom: 30px;
+  justify-content: center;
+  position: relative;
+}
+.form__boton::before {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  content: "";
+  background: #FFF;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.form__boton:hover::before {
+  width: 100%;
+  opacity: 0.3;
+}
+
+.form__input[type=date]::-webkit-calendar-picker-indicator {
+  color: #ffffff;
+}
+
+.input3 {
+  grid-column: 3;
+}
+
+.label--margin {
+  margin-bottom: 10px;
+}
+
+.input--margin {
+  margin-bottom: 20px;
+}
+
+.form {
+  font-family: "PoiretOne";
+}
+
+.facturacion__imagen {
+  display: flex;
+  flex-direction: column;
+}
+.facturacion__form {
+  display: grid;
+  grid-template-columns: repeat(1 fr, 2);
   align-items: center;
+  grid-column-gap: 30px;
+  grid-row-gap: 35px;
 }
 
 .personales__form {
@@ -2445,88 +2463,58 @@ select:focus {
   grid-row-gap: 35px;
 }
 
-.input3 {
-  grid-column: 3;
-}
-
-.facturacion {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-.facturacion__imagen {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-.facturacion__formulario {
-  display: grid;
-  grid-template-columns: repeat(1 fr, 2);
-  grid-template-rows: repeat(1 fr, 4);
-  align-items: center;
-  grid-column-gap: 30px;
-  grid-row-gap: 35px;
-}
-
-.boton {
+.boton--form {
   font-size: 20px;
   padding: 10px 0px;
+  display: flex;
   justify-content: center;
 }
 
-.boton--form {
+.boton--enviar {
   width: 180px;
-  display: flex;
-  justify-content: center;
   visibility: hidden;
-  font-size: 20px;
 }
 
-.ultimo__form {
+.boton--left {
+  right: 7.5%;
+}
+.boton--left::before {
+  left: 0px;
+}
+
+.boton--right {
+  left: 7.5%;
+  visibility: hidden;
+}
+.boton--right::before {
+  right: 0px;
+}
+
+.botones {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 30px;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.ultimo1 {
-  display: grid;
-  grid-template-columns: repeat(1 fr, 2);
-  align-items: center;
-  grid-column-gap: 35px;
-  grid-row-gap: 35px;
-}
-
-.ultimo2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.carro {
-  display: flex;
-  width: 400vw;
-  position: relative;
-  transition: 0.5s all ease;
-}
-
-.paso {
-  width: 100vw;
-  transition: 0.5s all ease;
 }
 
 @media screen and (max-width: 920px) {
-  .facturacion {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
   .personales__form {
     grid-template-columns: repeat(1 fr, 2);
   }
   .input3 {
     grid-column: 2;
   }
-  .ultimo__form {
+}
+@media screen and (max-width: 630px) {
+  .facturacion__form {
+    display: flex;
     flex-direction: column;
+    grid-row-gap: 20px;
+    align-items: baseline;
+    margin-top: 30px;
+  }
+  .form__input {
+    width: 350px;
   }
 }/*# sourceMappingURL=styles.css.map */

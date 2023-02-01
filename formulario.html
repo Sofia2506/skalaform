@@ -15,30 +15,30 @@
     </a>
     <h1 class="seccion__titulo">Formulario de matrícula</h1>
     <div class="barra" id="barra"></div>
-    <div class="carro">
-        <div class="paso facturacion">
+    <div class="form">
+        <div class="form__seccion">
             <div class="facturacion__imagen">
                 <img src="img/deposito.png" id="pago-imagen" class="form__img">
-                <a class="inscripcion__boton boton">Sube tu comprobante</a>
+                <a class="inscripcion__boton boton--form">Sube tu comprobante</a>
             </div>
-            <form class="facturacion__formulario">
+            <form class="facturacion__form">
                 <label class="form__label">Modalidad de pago</label> 
                 <select class="form__input" id="pago">
                     <option class="form__opcion">Depósito</option>
                     <option class="form__opcion">Yape</option>
                 </select>
-                <label class="form__label">¿A nombre de quién<br> va la factura?</label> 
-                <input type="text" class="form__input" maxlength="60" id="nombre">
+                <label class="form__label">¿A nombre de quién va la boleta?</label> 
+                <input type="text" class="form__input" maxlength="50" id="nombre">
                 <label class="form__label">Tipo de documento</label> 
                 <select class="form__input">
-                    <option>D.N.I.</option>
-                    <option>No se</option>
+                    <option class="form__opcion">D.N.I.</option>
+                    <option class="form__opcion">Carne de extranjería</option>
                 </select>
                 <label class="form__label">Documento</label>
-                <input type="number" max="8" class="form__input">
+                <input type="number" maxlength="8" class="form__input">
             </form>
         </div>
-        <div class="paso facturacion">
+        <div class="form__seccion">
             <form class="personales__form">
                 <label class="form__label">Nombres y Apellidos</label>
                 <input type="text" class="form__input" placeholder="Apellidos">
@@ -49,14 +49,14 @@
                 <input type="number" max="9" class="form__input">
                 <label class="form__label">Documentos</label>
                 <select class="form__input">
-                    <option>D.N.I.</option>
-                    <option>No se</option>
+                    <option class="form__opcion">D.N.I.</option> class="form__opcion"
+                    <option class="form__opcion">Carné de extranjería</option>
                 </select>
                 <input type="number" max="8" class="form__input input3">
             </form>
         </div>
-        <div class="paso facturacion">
-            <form class="facturacion__formulario">
+        <div class="form__seccion">
+            <form class="facturacion__form">
                 <label class="form__label">Lugar de nacimiento</label>
                 <input type="text" class="form__input">
                 <label class="form__label">Dirección domiciliaria</label>
@@ -65,43 +65,41 @@
                 <input type="email" class="form__input">
             </form>
         </div>
-        <div class="paso ultimoPaso">
-            <form class="ultimo__form">
-                <div class="ultimo1">
-                    <h3 class="form__subs">Elige tu plan skala studio</h3>
-                    <label class="form__label">Modalidad</label>
-                    <select class="form__input">
-                        <option>Presencial</option>
-                        <option>Semipresencial</option>
-                        <option>Virtual</option>
-                    </select>
-                    <label class="form__label">Nivel</label>
-                    <select class="form__input">
-                        <option></option>
-                    </select>
-                    <label class="form__label">Horario</label>
-                    <select class="form__input">
-                        <option></option>
-                    </select>
-                    <label class="form__label">Fecha de inicio</label>
-                    <input type="date" class="form__input">
-                </div>
-                <div class="ultimo2">
-                    <h3>Datos académicos</h3>
-                    <label class="form__label label--margin">Institución de procedencia</label>
-                    <input type="text" class="form__input input--margin">
-                    <h3>Datos familiares</h3>
-                    <label class="form__label label--margin">Nombre y apellido del representante</label>
-                    <input type="text" class="form__input input--margin" placeholder="Apellidos">
-                    <input type="text" class="form__input" placeholder="Nombres">
-                </div>
-            </form>
+        <div class="form__seccion">
+            <div class="facturacion__form">
+                <h3 class="form__subs">Elige tu plan skala studio</h3>
+                <label class="form__label">Modalidad</label>
+                <select class="form__input">
+                    <option class="form__opcion">Presencial</option>
+                    <option class="form__opcion">Semipresencial</option>
+                    <option class="form__opcion">Virtual</option>
+                </select>
+                <label class="form__label">Nivel</label>
+                <select class="form__input">
+                    <option></option>
+                </select>
+                <label class="form__label">Horario</label>
+                <select class="form__input">
+                    <option></option>
+                </select>
+                <label class="form__label">Fecha de inicio</label>
+                <input type="date" class="form__input">
+            </div>
+            <div class="facturacion__imagen">
+                <h3>Datos académicos</h3>
+                <label class="form__label label--margin">Institución de procedencia</label>
+                <input type="text" class="form__input input--margin">
+                <h3>Datos del familiar apoderado</h3>
+                <label class="form__label label--margin">Nombre y apellido del representante</label>
+                <input type="text" class="form__input input--margin" placeholder="Apellidos">
+                <input type="text" class="form__input" placeholder="Nombres">
+            </div>
         </div>
     </div>
     <div class="botones" id="botones">
-        <input id="anterior" type="button" value="Anterior" class="form__boton boton--right" onclick="anterior()">
-        <a id="enviar" class="inscripcion__boton boton--form" href="#">Enviar</a>
-        <input id="siguiente" type="button" value="Siguiente" class="form__boton boton--left" onclick="siguiente()">
+        <a id="anterior" class="form__boton boton--right" onclick="anterior()">Anterior</a>
+        <a id="enviar" class="inscripcion__boton boton--enviar boton--form" href="#">Enviar</a>
+        <a id="siguiente" class="form__boton boton--left" onclick="siguiente()">Siguiente</a>
     </div>
     <script src="scripts/pago.js"></script>
     <script src="scripts/botones.js"></script>

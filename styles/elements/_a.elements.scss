@@ -5,6 +5,7 @@ h2{
 a{
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 body{
     color: $blanco;
@@ -24,9 +25,6 @@ h4, h5{
 p{
     font-family: $text-font;
     font-size:$normal-font-size;
-}
-form{
-    font-family: $text-font;
 }
 img{
     user-select: none;
