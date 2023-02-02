@@ -3,11 +3,12 @@
 }
 .form{
     display: flex;
-    width: 400vw;
+    width: 100vw;
     position: relative;
     transition: .5s all ease;
+    overflow-x: hidden;
     &__seccion{
-        width: 100vw;
+        min-width: 100vw;
         transition: .5s all ease;
         @include justificar(space-around);
     }

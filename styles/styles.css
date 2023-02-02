@@ -2347,12 +2347,13 @@ hr {
 
 .form {
   display: flex;
-  width: 400vw;
+  width: 100vw;
   position: relative;
   transition: 0.5s all ease;
+  overflow-x: hidden;
 }
 .form__seccion {
-  width: 100vw;
+  min-width: 100vw;
   transition: 0.5s all ease;
   display: flex;
   justify-content: space-around;
