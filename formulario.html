@@ -14,7 +14,59 @@
         Suficiencia Unsa
     </a>
     <h1 class="seccion__titulo">Formulario de matrícula</h1>
-    <div class="barra" id="barra"></div>
+    <div class="barrita" id="barrita">
+        <div class="iconos-conteiner">
+            
+            <img class = "estado-img actual-img" src="./img/pago.svg" alt="">
+            <img class = "estado-img" src="./img/datos.png" alt="">
+            <img class = "estado-img" src="./img/mapa.png" alt="">
+            <img class = "estado-img" src="./img/final.png" alt="">
+        </div>
+        <div class="barra-conteiner" id="barra">
+            <div class="barras-conteiner">
+                <div class="barra barra__1">
+                    <div class="estado actual">
+                        <img class = "listo"   src="./img/listo.png" alt="">
+                        <img class = "proceso" src="./img/proceso.png" alt="">
+                    </div>
+                </div>
+                <div class="barra-gris"></div>
+            </div>
+            <div class="barras-conteiner">
+                <div class="barra barra__2">
+                    <div class="estado noPaso">
+                        <img class = "listo" src="./img/listo.png" alt="">
+                        <img class = "proceso"src="./img/proceso.png" alt="">
+                    </div>
+                    <div class="barra-gris"></div>
+                </div>
+                <div class="barra-gris"></div>
+            </div>
+            <div class="barras-conteiner">
+                <div class="barra barra__3">
+                    <div class="estado noPaso">
+                        <img class = "listo" src="./img/listo.png" alt="">
+                        <img class = "proceso" src="./img/proceso.png" alt="">
+                    </div>
+                </div>
+                <div class="barra-gris"></div>
+            </div>
+            <div class="barras-conteiner">
+                <div class="barra barra__4">
+                    <div class="estado noPaso">
+                        <img class = "listo"  src="./img/listo.png" alt="">
+                        <img class = "proceso"  src="./img/proceso.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="textos-conteiner">
+            <h4>Datos de <br>facturación</h4>
+            <h4>Datos <br>personales</h4>
+            <h4>Datos de <br>ubicación</h4>
+            <h4>Último <br> paso</h4>
+        </div>
+    </div>
     <div class="form">
         <div class="form__seccion">
             <div class="facturacion__imagen">
@@ -97,11 +149,12 @@
         </div>
     </div>
     <div class="botones" id="botones">
-        <a id="anterior" class="form__boton boton--right" onclick="anterior()">Anterior</a>
+        <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
         <a id="enviar" class="inscripcion__boton boton--enviar boton--form" href="#">Enviar</a>
-        <a id="siguiente" class="form__boton boton--left" onclick="siguiente()">Siguiente</a>
+        <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
     </div>
     <script src="scripts/pago.js"></script>
     <script src="scripts/botones.js"></script>
+    <script src="scripts/barra.js"></script>
 </body>
 </html>
