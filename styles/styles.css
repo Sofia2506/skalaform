@@ -2468,6 +2468,7 @@ hr {
   padding: 10px 0px;
   display: flex;
   justify-content: center;
+  width: 300px;
 }
 
 .boton--enviar {
@@ -2499,6 +2500,11 @@ hr {
 }
 
 @media screen and (max-width: 920px) {
+  .form__seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .personales__form {
     grid-template-columns: repeat(1 fr, 2);
   }
@@ -2516,5 +2522,11 @@ hr {
   }
   .form__input {
     width: 350px;
+  }
+  .personales__form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    grid-row-gap: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */

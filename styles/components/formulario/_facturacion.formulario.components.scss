@@ -88,7 +88,9 @@
 .form{
     font-family: $parrafo;
 }
+
 //estructuración
+
 .facturacion{
     &__imagen{
         display: flex;
@@ -107,6 +109,7 @@
     font-size: 20px;
     padding: 10px 0px;
     @include justificar(center);
+    width: 300px;
 }
 .boton--enviar{
     width: 180px;
@@ -134,6 +137,11 @@
 
 //RESPONSIVE
 @media screen and (max-width: 920px){
+    .form__seccion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .personales__form{
         grid-template-columns: repeat(1 fr, 2);
     }
@@ -151,5 +159,11 @@
     }
     .form__input{
         width: 350px;
+    }
+    .personales__form{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        grid-row-gap: 20px;
     }
 }
