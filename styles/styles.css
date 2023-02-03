@@ -2501,6 +2501,28 @@ hr {
   overflow-y: hidden;
 }
 
+.boton--subir {
+  position: relative;
+  padding: 0;
+  height: 45px;
+  align-items: center;
+}
+
+.boton--subir::before {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: "Sube tu comprobante";
+  position: absolute;
+}
+
+.boton--subir input[type=file] {
+  opacity: 0;
+  height: 45px;
+}
+
 @media screen and (max-width: 920px) {
   .form__seccion {
     display: flex;
