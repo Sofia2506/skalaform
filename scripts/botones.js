@@ -4,14 +4,11 @@ var antes = document.getElementById("anterior");
 var next = document.getElementById("siguiente");
 var enviar = document.getElementById("enviar");
 
-var form = document.getElementById("form");
-
 function avanzar(){
     for(let i = 0 ; i<pregunta.length; i++){
         pregunta[i].style.transform="translateX(-"+cant+"%)";
     }
     visibilidad();
-    altura();
 }
 function siguiente(){
     cant+=100;
@@ -40,11 +37,3 @@ function visibilidad(){
     }
 }
 
-function altura(){
-    if(cant == 100 || cant == 200){
-        form.style.height="500px"
-    }
-    else{
-        form.style.height="800px";
-    }
-}

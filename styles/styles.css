@@ -2496,11 +2496,6 @@ hr {
   align-items: center;
 }
 
-.seccion--altura {
-  height: 550px;
-  overflow-y: hidden;
-}
-
 .boton--subir {
   position: relative;
   padding: 0;
