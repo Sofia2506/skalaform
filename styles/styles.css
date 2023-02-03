@@ -2528,16 +2528,11 @@ hr {
   }
 }
 .iconos-conteiner, .textos-conteiner, .barra-conteiner {
-  width: 500px;
   margin-left: auto;
   margin-right: auto;
-  top: 50px;
   display: grid;
   align-content: center;
   position: relative;
-  height: 10 0px;
-  position: relative;
-  align-items: center;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -2569,19 +2564,25 @@ hr {
 .barras-conteiner {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .barra-gris {
   position: absolute;
-  width: 21%;
   height: 50%;
   background-color: #D2D3D8;
   top: 0;
+  width: calc(100% - 20px);
   z-index: -1;
 }
 
 .barrita {
   margin-bottom: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  left: 7vw;
+  position: relative;
 }
 
 .barra {
@@ -2660,4 +2661,11 @@ hr {
      object-fit: cover;
   display: none;
   height: 50%;
+}
+
+@media (max-width: 700px) {
+  .textos-conteiner {
+    display: none;
+    position: relative;
+  }
 }/*# sourceMappingURL=styles.css.map */
