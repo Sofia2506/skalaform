@@ -17,14 +17,14 @@ function isMobile() {
 }
 
 const formulario = document.getElementById('form');
-const buttonSubmit = document.querySelector('#submit');
+const buttonSubmit = document.querySelector('#enviar');
 const urlDesktop = 'https://web.whatsapp.com/';
 const urlMobile = 'whatsapp://';
 const telefono = '924417100';
 
 formulario.addEventListener('submit', async (event) => {
+    console.log("se presiono el boton enviar")
     //Datos de boleta
-    var image = document.getElementById("image").vale;
     var nombreBoleta = document.getElementById("nombreBoleta").value;
     var TipoDocumentoBoleta = document.getElementById("TipoDocumentoBoleta").value;
     var documentoBoleta = document.getElementById("documentoBoleta").value;
@@ -44,6 +44,10 @@ formulario.addEventListener('submit', async (event) => {
     var nivel = document.getElementById("nivel").value;
     var horario = document.getElementById("horario").value;
     var fechaInicio = document.getElementById("fechaInicio").value;
+    //Academicos
+    var institucion = document.getElementById("institucion").value;
+    var nombreRepresentante   = document.getElementById("nombreRepresentante").value;  
+    var apellidoRepresentante = document.getElementById("apellidoRepresentante").value; 
     //Desactivación del boton enviar porque ya envio y que actualice la página
     event.preventDefault()
     buttonSubmit.disabled = true
@@ -57,11 +61,10 @@ formulario.addEventListener('submit', async (event) => {
             },
             //al poner un objeto js, y esta cosa lo transforma a JSON   
             body : JSON.stringify({
-                "Nombre" : nombre,
                //Datos de boleta
                "NombreBoleta" : nombreBoleta,
                "TipoDocumentoBoleta" : TipoDocumentoBoleta,
-               "documentoBoleta" : documentoBoleta,
+               "DocumentoBoleta" : documentoBoleta,
     //Datos personales
                 "ApellidoEstudiante" : apellidoEstudiante,
                 "NombreEstudiante" : nombreEstudiante,
@@ -71,13 +74,18 @@ formulario.addEventListener('submit', async (event) => {
                 "DocumentoEstudiante" : documentoEstudiante,
     //Datos de ubicación
                 "LugarNacimientoEstudiante" : lugarNacimientoEstudiante,
-                "DireccionEstudiante" : lugarNacimientoEstudiante,
+                "DireccionEstudiante" : direccionEstudiante,
                 "CorreoEstudiante" : correoEstudiante,
     //Plan
                 "Modalidad" : modalidad,
                 "Nivel" : nivel,
                 "Horario" : horario,
                 "FechaInicio" : fechaInicio,
+    //Datos academicos
+                "Institucion" : institucion,
+    //Datos del apoderado
+                "NombreRepresentante" : nombreRepresentante,
+                "ApellidoRepresentante" : apellidoRepresentante,
             })  
         });
     }
@@ -86,7 +94,7 @@ formulario.addEventListener('submit', async (event) => {
     }
 
     //Envio a googleSheet
-    let image = document.getElementById("image");
+    let image = document.getElementById("file");
     let fr = new FileReader();
     fr.addEventListener('loadend',()=>{
         let res = fr.result;

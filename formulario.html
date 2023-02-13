@@ -67,8 +67,8 @@
             <h4>Último <br> paso</h4>
         </div>
     </div>
-    <form action="">
-        <div class="form" id="form">
+    <form id = "form" action="">
+        <div class="form" >
             <!--DATOS BOLETA-->
             <div class="form__seccion">
                 <div class="facturacion__imagen">
@@ -146,22 +146,23 @@
                 <div class="facturacion__imagen">
                     <h3>Datos académicos</h3>
                     <label class="form__label label--margin">Institución de procedencia</label>
-                    <input type="text" class="form__input input--margin">
+                    <input type="text" id = "institucion" class="form__input input--margin">
                     <h3>Datos del familiar apoderado</h3>
                     <label class="form__label label--margin">Nombre y apellido del representante</label>
-                    <input type="text" class="form__input input--margin" placeholder="Apellidos">
-                    <input type="text" class="form__input" placeholder="Nombres">
+                    <input type="text" id = "apellidoRepresentante" class="form__input input--margin" placeholder="Apellidos">
+                    <input type="text" id = "nombreRepresentante" class="form__input" placeholder="Nombres">
                 </div>
             </div>
         </div>
         <div class="botones" id="botones">
             <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
-            <input type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">
+            <button type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">Enviar</button>
             <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
         </div>
     </form>
-    <script src="scripts/pago.js"></script>
-    <script src="scripts/botones.js"></script>
-    <script src="scripts/barra.js"></script>
+    <script src = "scripts/pago.js"></script>
+    <script src = "scripts/botones.js"></script>
+    <script src = "scripts/barra.js"></script>
+    <script src = "scripts/envio.js"></script>
 </body>
 </html>
