@@ -7,7 +7,7 @@ var filename = document.getElementById("file");
 filename.addEventListener("change", function(){
     console.log(filename.value);
     img.style.display="none";
-    html +=`<p>Gracias por subir ${filename.value}</p>`;
+    html +=`<p class="pago-notificacion">Gracias por subir<br> ${filename.value}</p>`;
     document.getElementById("file-content").innerHTML = html;
 
 });

@@ -67,97 +67,99 @@
             <h4>Último <br> paso</h4>
         </div>
     </div>
-    <div class="form" id="form">
-        <!--DATOS BOLETA-->
-        <div class="form__seccion">
-            <div class="facturacion__imagen">
-                <img src="img/deposito.png" id="pago-imagen" class="form__img">
-                <div id="file-content"></div>
-                <div class="inscripcion__boton boton--form boton--subir">
-                    <input type="file" accept="image/png, .jpeg, .jpg" id="file">
+    <form action="">
+        <div class="form" id="form">
+            <!--DATOS BOLETA-->
+            <div class="form__seccion">
+                <div class="facturacion__imagen">
+                    <img src="img/deposito.png" id="pago-imagen" class="form__img">
+                    <div id="file-content"></div>
+                    <div class="inscripcion__boton boton--form boton--subir">
+                        <input type="file" accept="image/png, .jpeg, .jpg" id="file">
+                    </div>
+                </div>
+                <div class="facturacion__form">
+                    <label class="form__label">Modalidad de pago</label> 
+                    <select class="form__input" id="pago">
+                        <option class="form__opcion">Depósito</option>
+                        <option class="form__opcion">Yape</option>
+                    </select>
+                    <label class="form__label">¿A nombre de quién va la boleta?</label> 
+                    <input type="text" class="form__input" maxlength="50" id="nombreBoleta">
+                    <label class="form__label">Tipo de documento</label> 
+                    <select id = "TipoDocumentoBoleta" class="form__input">
+                        <option class="form__opcion">D.N.I.</option>
+                        <option class="form__opcion">Carne de extranjería</option>
+                    </select>
+                    <label class="form__label">Documento</label>
+                    <input id = "documentoBoleta" type="number" maxlength="8" class="form__input">
                 </div>
             </div>
-            <form class="facturacion__form">
-                <label class="form__label">Modalidad de pago</label> 
-                <select class="form__input" id="pago">
-                    <option class="form__opcion">Depósito</option>
-                    <option class="form__opcion">Yape</option>
-                </select>
-                <label class="form__label">¿A nombre de quién va la boleta?</label> 
-                <input type="text" class="form__input" maxlength="50" id="nombreBoleta">
-                <label class="form__label">Tipo de documento</label> 
-                <select id = "TipoDocumentoBoleta" class="form__input">
-                    <option class="form__opcion">D.N.I.</option>
-                    <option class="form__opcion">Carne de extranjería</option>
-                </select>
-                <label class="form__label">Documento</label>
-                <input id = "documentoBoleta" type="number" maxlength="8" class="form__input">
-            </form>
-        </div>
-        <!--DATOS PERSONALES-->
-        <div class="form__seccion">
-            <form class="personales__form">
-                <label class="form__label">Nombres y Apellidos</label>
-                <input id = "apellidoEstudiante" type="text" class="form__input" placeholder="Apellidos">
-                <input id = "nombreEstudiante" type="text" class="form__input input3" placeholder="Nombres">
-                <label class="form__label">Fecha de nacimiento</label>
-                <input id = "nacimientoEstudiante" type="date" class="form__input">
-                <label class="form__label">Celular</label>
-                <input id = "celularEstudiante" type="number" max="9" class="form__input">
-                <label  class="form__label">Documentos</label>
-                <select id = "tipoDocumentoEstudiante" class="form__input">
-                    <option class="form__opcion">D.N.I.</option> class="form__opcion"
-                    <option class="form__opcion">Carné de extranjería</option>
-                </select>
-                <input id = "documentoEstudiante" type="number" max="8" class="form__input input3">
-            </form>
-        </div>
-        <div class="form__seccion">
-            <form class="facturacion__form">
-                <label class="form__label">Lugar de nacimiento</label>
-                <input id = "lugarNacimientoEstudiante" type="text" class="form__input">
-                <label class="form__label">Dirección domiciliaria</label>
-                <input id = "direccionEstudiante" type="text" class="form__input">
-                <label class="form__label">Correo electrónico</label>
-                <input id = "correoEstudiante" type="email" class="form__input">
-            </form>
-        </div>
-        <div class="form__seccion">
-            <div class="facturacion__form">
-                <h3 class="form__subs">Elige tu plan skala studio</h3>
-                <label class="form__label">Modalidad</label>
-                <select id = "modalidad" class="form__input">
-                    <option class="form__opcion">Presencial</option>
-                    <option class="form__opcion">Semipresencial</option>
-                    <option class="form__opcion">Virtual</option>
-                </select>
-                <label  class="form__label">Nivel</label>
-                <select id = "nivel" class="form__input">
-                    <option>1</option>
-                </select>
-                <label  class="form__label">Horario</label>
-                <select id = "horario" class="form__input">
-                    <option>2</option>
-                </select>
-                <label class="form__label">Fecha de inicio</label>
-                <input id = "fechaInicio" type="date" class="form__input">
+            <!--DATOS PERSONALES-->
+            <div class="form__seccion">
+                <div class="personales__form">
+                    <label class="form__label">Nombres y Apellidos</label>
+                    <input id = "apellidoEstudiante" type="text" class="form__input" placeholder="Apellidos">
+                    <input id = "nombreEstudiante" type="text" class="form__input input3" placeholder="Nombres">
+                    <label class="form__label">Fecha de nacimiento</label>
+                    <input id = "nacimientoEstudiante" type="date" class="form__input">
+                    <label class="form__label">Celular</label>
+                    <input id = "celularEstudiante" type="number" max="9" class="form__input">
+                    <label  class="form__label">Documentos</label>
+                    <select id = "tipoDocumentoEstudiante" class="form__input">
+                        <option class="form__opcion">D.N.I.</option> class="form__opcion"
+                        <option class="form__opcion">Carné de extranjería</option>
+                    </select>
+                    <input id = "documentoEstudiante" type="number" max="8" class="form__input input3">
+                </div>
             </div>
-            <div class="facturacion__imagen">
-                <h3>Datos académicos</h3>
-                <label class="form__label label--margin">Institución de procedencia</label>
-                <input type="text" class="form__input input--margin">
-                <h3>Datos del familiar apoderado</h3>
-                <label class="form__label label--margin">Nombre y apellido del representante</label>
-                <input type="text" class="form__input input--margin" placeholder="Apellidos">
-                <input type="text" class="form__input" placeholder="Nombres">
+            <div class="form__seccion">
+                <div class="facturacion__form">
+                    <label class="form__label">Lugar de nacimiento</label>
+                    <input id = "lugarNacimientoEstudiante" type="text" class="form__input">
+                    <label class="form__label">Dirección domiciliaria</label>
+                    <input id = "direccionEstudiante" type="text" class="form__input">
+                    <label class="form__label">Correo electrónico</label>
+                    <input id = "correoEstudiante" type="email" class="form__input">
+                </div>
+            </div>
+            <div class="form__seccion">
+                <div class="facturacion__form">
+                    <h3 class="form__subs">Elige tu plan skala studio</h3>
+                    <label class="form__label">Modalidad</label>
+                    <select id = "modalidad" class="form__input">
+                        <option class="form__opcion">Presencial</option>
+                        <option class="form__opcion">Semipresencial</option>
+                        <option class="form__opcion">Virtual</option>
+                    </select>
+                    <label  class="form__label">Nivel</label>
+                    <select id = "nivel" class="form__input">
+                        <option>1</option>
+                    </select>
+                    <label  class="form__label">Horario</label>
+                    <select id = "horario" class="form__input">
+                        <option>2</option>
+                    </select>
+                    <label class="form__label">Fecha de inicio</label>
+                    <input id = "fechaInicio" type="date" class="form__input">
+                </div>
+                <div class="facturacion__imagen">
+                    <h3>Datos académicos</h3>
+                    <label class="form__label label--margin">Institución de procedencia</label>
+                    <input type="text" class="form__input input--margin">
+                    <h3>Datos del familiar apoderado</h3>
+                    <label class="form__label label--margin">Nombre y apellido del representante</label>
+                    <input type="text" class="form__input input--margin" placeholder="Apellidos">
+                    <input type="text" class="form__input" placeholder="Nombres">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="botones" id="botones">
-        <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
-        <input type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">
-        <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
-    </div>
+        <div class="botones" id="botones">
+            <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
+            <input type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">
+            <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
+        </div>
+    </form>
     <script src="scripts/pago.js"></script>
     <script src="scripts/botones.js"></script>
     <script src="scripts/barra.js"></script>

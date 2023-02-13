@@ -155,7 +155,9 @@
     height: 45px;
   }
 
-
+.pago-notificacion{
+    @include justificar(center);
+}
 //RESPONSIVE
 @media screen and (max-width: 920px){
     .form__seccion{

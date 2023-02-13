@@ -2519,6 +2519,11 @@ hr {
   height: 45px;
 }
 
+.pago-notificacion {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 920px) {
   .form__seccion {
     display: flex;
