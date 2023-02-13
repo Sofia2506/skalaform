@@ -157,6 +157,7 @@
 
 .pago-notificacion{
     @include justificar(center);
+    margin-top: 5px;
 }
 //RESPONSIVE
 @media screen and (max-width: 920px){
