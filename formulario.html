@@ -72,8 +72,9 @@
         <div class="form__seccion">
             <div class="facturacion__imagen">
                 <img src="img/deposito.png" id="pago-imagen" class="form__img">
+                <div id="file-content"></div>
                 <div class="inscripcion__boton boton--form boton--subir">
-                    <input type="file">
+                    <input type="file" accept="image/png, .jpeg, .jpg" id="file">
                 </div>
             </div>
             <form class="facturacion__form">
@@ -154,7 +155,7 @@
     </div>
     <div class="botones" id="botones">
         <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
-        <a id="enviar" class="inscripcion__boton boton--enviar boton--form" href="#">Enviar</a>
+        <input type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">
         <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
     </div>
     <script src="scripts/pago.js"></script>

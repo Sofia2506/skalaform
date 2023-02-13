@@ -108,6 +108,7 @@
     padding: 10px 0px;
     @include justificar(center);
     width: 300px;
+    cursor: pointer;
 }
 .boton--enviar{
     width: 180px;

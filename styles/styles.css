@@ -2466,6 +2466,7 @@ hr {
   display: flex;
   justify-content: center;
   width: 300px;
+  cursor: pointer;
 }
 
 .boton--enviar {
