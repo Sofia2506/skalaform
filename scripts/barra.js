@@ -1,4 +1,3 @@
-console.log("Barra")
 //efecto de hacer click y que deslice
     //botones
     var next = document.getElementById("siguiente");
