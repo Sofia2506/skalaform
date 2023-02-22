@@ -13,12 +13,12 @@
     box-sizing: border-box;
     margin: 0;
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     top: 0;
-    background-color: #00000089;
+    background-color: #000000da;
     flex-direction: column;
     &__img{
         display: flex;
@@ -26,7 +26,15 @@
         justify-content: center;
     }
   }
-  
+  .opciones__form{
+    display: none;
+    justify-content: space-evenly;
+  }
+  .carga__info{
+    margin: 20px;
+    width: 60%;
+    text-align: center;
+  }
 
   .carga__efecto {
     width: 120px;

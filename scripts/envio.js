@@ -15,14 +15,17 @@ function isMobile() {
         if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
     return false;
 }
-
 const formulario = document.getElementById('form');
 const buttonSubmit = document.querySelector('#enviar');
-const urlDesktop = 'https://web.whatsapp.com/';
-const urlMobile = 'whatsapp://';
-const telefono = '924417100';
-
+//selectores para el loader
+var loader = document.getElementById("carga");
+var cargaEfecto = document.getElementById("carga__efecto")
+var logo = document.getElementById("img__carga");
+var texto__carga = document.getElementById("texto__carga");
+var opciones_form = document.getElementById("opciones__form");
+//hasta aquí noma
 formulario.addEventListener('submit', async (event) => {
+    loader.style.display = "flex";
     console.log("se presiono el boton enviar")
     //Datos de boleta
     var nombreBoleta = document.getElementById("nombreBoleta").value;
@@ -51,6 +54,35 @@ formulario.addEventListener('submit', async (event) => {
     //Desactivación del boton enviar porque ya envio y que actualice la página
     event.preventDefault()
     buttonSubmit.disabled = true
+    //Envio de imagen 
+    let image = document.getElementById("file");
+    let fr = new FileReader();
+    fr.addEventListener('loadend',()=>{
+        let res = fr.result;
+        let spt = res.split("base64,")[1];
+        let obj = {
+            base64:spt,
+            type:image.files[0].type,
+            name:image.files[0].name
+        }
+        fetch(urlScriptSheet,{
+            method:"POST",
+            body:JSON.stringify(obj)
+        })
+        .then(r=>r.text())
+        //actualización de datos
+        .then(data =>{
+            console.log("Se logro enviar" + data);
+            setTimeout(() => {
+                opciones_form.style.display = "flex";
+                texto__carga.innerHTML = "Gracias por registrarte, puedes descargar tu comprobante de matricula pero recuerda que es solo referencial,cuando tu matricula sea verificada, se te enviara el comprobante a tu correo electronico y número de celular gracias😉";
+                cargaEfecto.style.display = "none"
+                buttonSubmit.disabled = false
+            }, 1000);
+        })  
+    })
+    fr.readAsDataURL(image.files[0])
+    
     //Envio de datos sin imagen a google sheet
     try{
         await fetch('https://sheet.best/api/sheets/ccbce7ee-c532-4a77-8a92-233ea4dc8671',{
@@ -88,43 +120,12 @@ formulario.addEventListener('submit', async (event) => {
                 "ApellidoRepresentante" : apellidoRepresentante,
             })  
         });
+    console.log("Terminoo de enviar todooo")
     }
     catch(error){
             console.log(error);
     }
 
-    //Envio a googleSheet
-    let image = document.getElementById("file");
-    let fr = new FileReader();
-    fr.addEventListener('loadend',()=>{
-        let res = fr.result;
-        let spt = res.split("base64,")[1];
-        let obj = {
-            base64:spt,
-            type:image.files[0].type,
-            name:image.files[0].name
-        }
-        fetch(urlScriptSheet,{
-            method:"POST",
-            body:JSON.stringify(obj)
-        })
-        .then(r=>r.text())
-        //envio a whatsapp
-        .then(data =>{
-            console.log(data)
-            setTimeout(() => {
-                var image = data;    
-                var  mensaje = 'send?phone=' + telefono + '&text=*Nombres* : ' + nombreBoleta + '%0A*Pago link :* '+image;
-                if(isMobile()) {
-                    window.open(urlMobile + mensaje, '_blank')
-                }else{
-                    window.open(urlDesktop + mensaje, '_blank')
-                }
-                buttonSubmit.disabled = false
-            }, 1000);
-        })  
-    })
-    fr.readAsDataURL(image.files[0])
     //Fin del envio a google sheet
  
 }); 

@@ -246,6 +246,68 @@ input, select {
   text-align: center;
 }
 
+.boton__descarga {
+  padding: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.0549019608);
+  font-family: "PoiretOne";
+}
+.boton__descarga:hover {
+  background-color: #166b6e;
+}
+.boton__descarga__icono {
+  height: 20px;
+  margin-left: 15px;
+}
+.boton__descarga--a {
+  margin: 10px;
+}
+
+.container__boton--link {
+  font-family: "BebasNeue";
+  position: relative;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+}
+
+.boton__link {
+  position: relative;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+.boton__link::before, .boton__link::after {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  content: "";
+  background: #FFF;
+  opacity: 1;
+  transition: all 0.3s;
+  transition: opacity 0;
+}
+.boton__link:before {
+  left: 0px;
+}
+.boton__link:after {
+  right: 0px;
+}
+.boton__link:hover:before, .boton__link:hover:after {
+  width: 100%;
+  opacity: 0.3;
+}
+
 @media screen and (max-width: 1050px) {
   .seccion__titulo {
     font-size: 50px;
@@ -2676,18 +2738,29 @@ hr {
   box-sizing: border-box;
   margin: 0;
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.537254902);
+  background-color: rgba(0, 0, 0, 0.8549019608);
   flex-direction: column;
 }
 .carga__img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.opciones__form {
+  display: none;
+  justify-content: space-evenly;
+}
+
+.carga__info {
+  margin: 20px;
+  width: 60%;
+  text-align: center;
 }
 
 .carga__efecto {
