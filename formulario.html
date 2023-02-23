@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/generic/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Formulario</title>
-</head>
-<body>
-    <a href="suficiencia-Unsa.html" class="flecha-atras__link">
-        <img class="talleres__flecha-atras" src="img/talleres/flecha.png" alt="atras">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/generic/normalize.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <title>Formulario</title>
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+
+    </head>
+    <body>
+        <a href="suficiencia-Unsa.html" class="flecha-atras__link">
+            <img class="talleres__flecha-atras" src="img/talleres/flecha.png" alt="atras">
         Suficiencia Unsa
     </a>
     <h1 class="seccion__titulo">Formulario de matrícula</h1>
@@ -20,7 +22,7 @@
             <img class = "estado-img actual-img" src="./img/pago.svg" alt="">
             <img class = "estado-img" src="./img/datos.png" alt="">
             <img class = "estado-img" src="./img/mapa.png" alt="">
-            <img class = "estado-img" src="./img/final.png" alt="">
+            <img class = "estado-img" src="./img/final.png" alt="" id="listo">
         </div>
         <div class="barra-conteiner" id="barra">
             <div class="barras-conteiner">
@@ -156,12 +158,13 @@
         </div>
         <div class="botones" id="botones">
             <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
-            <input type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">
+            <input type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar" onclick="generarPDF()">
             <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
         </div>
     </form>
     <script src="scripts/pago.js"></script>
     <script src="scripts/botones.js"></script>
     <script src="scripts/barra.js"></script>
+    <script src="scripts/pdf.js"></script>
 </body>
 </html>
