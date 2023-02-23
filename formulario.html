@@ -69,8 +69,8 @@
             <h4>Último <br> paso</h4>
         </div>
     </div>
-    <form action="">
-        <div class="form" id="form">
+    <form id = "form" action="">
+        <div class="form" >
             <!--DATOS BOLETA-->
             <div class="form__seccion">
                 <div class="facturacion__imagen">
@@ -148,16 +148,17 @@
                 <div class="facturacion__imagen">
                     <h3>Datos académicos</h3>
                     <label class="form__label label--margin">Institución de procedencia</label>
-                    <input type="text" class="form__input input--margin">
+                    <input type="text" id = "institucion" class="form__input input--margin">
                     <h3>Datos del familiar apoderado</h3>
                     <label class="form__label label--margin">Nombre y apellido del representante</label>
-                    <input type="text" class="form__input input--margin" placeholder="Apellidos">
-                    <input type="text" class="form__input" placeholder="Nombres">
+                    <input type="text" id = "apellidoRepresentante" class="form__input input--margin" placeholder="Apellidos">
+                    <input type="text" id = "nombreRepresentante" class="form__input" placeholder="Nombres">
                 </div>
             </div>
         </div>
         <div class="botones" id="botones">
             <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
+<<<<<<< HEAD
             <input type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar" onclick="generarPDF()">
             <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
         </div>
@@ -166,5 +167,39 @@
     <script src="scripts/botones.js"></script>
     <script src="scripts/barra.js"></script>
     <script src="scripts/pdf.js"></script>
+=======
+            <button type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">Enviar</button>
+            <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
+        </div>
+    </form>
+    <!--Loader de formulario final final final final ya me canse, tengo sueño-->
+    <div id = "carga" class = "carga">
+        <div class="carga__img">
+            <img id = "img__carga" class = "img__carga" src="../img/icono-web-lampara.ico" alt="">
+            <div id = "carga__efecto" class="carga__efecto"></div>
+        </div><br>
+        <div class = "carga__info">
+            <!--Regresar al principio-->
+            <!--Descargar tu comprobate-->
+            <p id = "texto__carga">Registrando</p>
+            <div id = "opciones__form" class="opciones__form">
+                <a href ="www.skalastudioarquitectura.com" class="container__boton--link">
+                    <div class="boton__link" id="open">regresar al incio</div>
+                </a>
+                <a class="boton__descarga--a" href="archivos/Brochure 2023 enero.pdf">
+                    <div class="boton__descarga">
+                        Descargar comprobante
+                        <img loading="lazy" class="boton__icono" src="img/descarga.webp" alt="descarga">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--FInal del loader porque me llega, weno toy cansadito xd-->
+    <script src = "scripts/pago.js"></script>
+    <script src = "scripts/botones.js"></script>
+    <script src = "scripts/envio.js"></script>
+    <script src = "scripts/barra.js"></script>
+>>>>>>> 0cd226409fa18210b9c0e545e3f797537f348b0b
 </body>
 </html>
