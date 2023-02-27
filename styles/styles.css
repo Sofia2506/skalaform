@@ -2583,7 +2583,16 @@ hr {
     align-items: baseline;
     grid-row-gap: 20px;
   }
+  .boton--enviar {
+    width: 100px;
+    padding: 5px;
+    margin: 0;
+  }
 }
+html {
+  overflow-x: hidden;
+}
+
 .iconos-conteiner, .textos-conteiner, .barra-conteiner {
   margin-left: auto;
   margin-right: auto;
@@ -2605,7 +2614,7 @@ hr {
 
 .estado-img {
   position: relative;
-  left: -25px;
+  left: calc(15vw - 25px);
   height: 50%;
   margin: 4px;
   filter: invert(86%) sepia(1%) saturate(1739%) hue-rotate(221deg) brightness(113%) contrast(69%);
@@ -2622,6 +2631,7 @@ hr {
 .barras-conteiner {
   width: 100%;
   height: 100%;
+  left: 15vw;
   position: relative;
 }
 
@@ -2639,7 +2649,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   width: 90vw;
-  left: 15vw;
+  /*  left: 15vw; */
   position: relative;
 }
 

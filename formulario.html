@@ -69,7 +69,7 @@
             <h4>Último <br> paso</h4>
         </div>
     </div>
-    <form onkeydown="return event.key != 'Enter';" id = "form" action="">
+    <form id = "form" action="">
         <div class="form" >
             <!--DATOS BOLETA-->
             <div class="form__seccion">
@@ -148,12 +148,13 @@
                         <!--Opciones que si es tal así sera su horario
                         Presencial plus(dos opciones) -> 2:00 - 4:00pm L a S
                                                         4:00 - 6:00pm L a V y el S de 2:00 a 4:00pm
-                        Presencial (dos opciones)-> 2:00- 4:00 pm L a V
+                        Presencial (dos opciones)-> 2:00- 4:00 pm L 
                                                 4:00 - 6:00 pm L a V
 
-                        Semi presencial -> 8:00 a 1pm presencial
-                                            8:00 a 1pm virtual
+                        Semi presencial -> 8:00 a 1pm sábado presencial
+                                            8:00 a 1pm presencial virtual
                         Virtual todos los niveles -> 8:30 a 10:30pm L a V
+                        virtual plus lo mismo de arriba y sábado de 2 a 4 virtual
                         -->
                         <option>2</option>
                     </select>
@@ -173,9 +174,9 @@
             </div>
         </div>
         <div class="botones" id="botones">
-            <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
-            <button type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">Enviar</button>
-            <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
+            <a id="anterior" class="form__boton boton--right" onclick="anterior()">Anterior</a>
+            <button type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form"  value="Enviar">Enviar</button>
+            <a id="siguiente" class="form__boton boton--left" onclick="siguiente()">Siguiente</a>
         </div>
     </form>
     <!--Loader de formulario final final final final ya me canse, tengo sueño-->
@@ -205,6 +206,6 @@
     <script src = "scripts/pago.js"></script>
     <script src = "scripts/botones.js"></script>
     <script src = "scripts/envio.js"></script>
-    <script src = "scripts/barra.js"></script>
+    <script src = "scripts/pdf.js"></script>
 </body>
 </html>
