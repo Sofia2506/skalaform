@@ -21,13 +21,13 @@
     background-color: #000000da;
     flex-direction: column;
     &__img{
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
     }
   }
   .opciones__form{
-    display: flex;
+    display: none;
     justify-content: space-evenly;
   }
   .carga__info{

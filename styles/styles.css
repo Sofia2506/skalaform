@@ -2763,13 +2763,13 @@ html {
   flex-direction: column;
 }
 .carga__img {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .opciones__form {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
 }
 
