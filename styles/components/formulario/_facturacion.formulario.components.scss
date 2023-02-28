@@ -8,6 +8,7 @@
         min-width: 100vw;
         transition: .5s all ease;
         @include justificar(space-around);
+        overflow: hidden;
     }
     &__label{
         grid-column: 1;

@@ -2387,6 +2387,7 @@ hr {
   transition: 0.5s all ease;
   display: flex;
   justify-content: space-around;
+  overflow: hidden;
 }
 .form__label {
   grid-column: 1;

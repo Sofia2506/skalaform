@@ -11,7 +11,7 @@ function avanzar(){
     for(let i = 0 ; i<pregunta.length; i++){
         pregunta[i].style.transform="translateX(-"+cant+"%)";
         if( i != section){
-            pregunta[i].style.height  = "500px";
+            pregunta[i].style.height  = "300px";
         }
         else {
             pregunta[i].style.height = "auto";
