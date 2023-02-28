@@ -246,6 +246,10 @@ input, select {
   text-align: center;
 }
 
+.text__disabled {
+  color: #808080;
+}
+
 .boton__descarga {
   padding: 10px;
   margin-bottom: 5px;
@@ -2610,6 +2614,7 @@ html {
   text-align: center;
   margin: 0;
   font-family: "PoiretOne";
+  left: 4vw;
 }
 
 .estado-img {

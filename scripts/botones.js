@@ -10,6 +10,12 @@ var section = 0;
 function avanzar(){
     for(let i = 0 ; i<pregunta.length; i++){
         pregunta[i].style.transform="translateX(-"+cant+"%)";
+        if( i != section){
+            pregunta[i].style.height  = "500px";
+        }
+        else {
+            pregunta[i].style.height = "auto";
+        }
     }
     visibilidad();
 }
@@ -31,25 +37,20 @@ function siguiente(){
         }
         else{ */
             cant+=100;
-            avanzar(); 
             siguienteBarra(); 
-            console.log("Iras a la sección "+section)
+            avanzar(); 
         /* } */
     }
     else if(section ==1){
-        console.log("Eesta en la sección 1")
         var apellidoEstudiante = document.getElementById("apellidoEstudiante").value;
         var nombreEstudiante = document.getElementById("nombreEstudiante").value;
         var nacimientoEstudiante = document.getElementById("nacimientoEstudiante").value;
         var celularEstudiante = document.getElementById("celularEstudiante").value;
         var documentoEstudiante = document.getElementById("documentoEstudiante").value;
-        console.log("nacimiento : "+nacimientoEstudiante)
-        console.log("nombre : " + nombreEstudiante)
 /*         if(nombreEstudiante == ""){
             alert("Ingrese el nombre del estudiante");
         }
         else if(apellidoEstudiante == ""){
-            console.log("Ta vacio ese nombre")
             alert("Ingrese el apellido del estudiante");
         }
         else if (nacimientoEstudiante == ""){
@@ -63,8 +64,8 @@ function siguiente(){
         }
         else{ */
             cant+=100;
-            avanzar(); 
             siguienteBarra(); 
+            avanzar(); 
         /* } */
     }
     else if(section == 2){
@@ -83,16 +84,14 @@ function siguiente(){
         }
         else{ */
             cant+=100;
-            avanzar(); 
             siguienteBarra(); 
-            console.log("Te estas yendo a la sección "+section);
+            avanzar(); 
       /*   } */
     }
 }
         //Verificación final del boton submit 
 /* var buttonSubmit = document.getElementById('enviar');
 buttonSubmit.addEventListener('click',function(){
-    console.log("Le estas haciendo click we")
     var fechaInicio = document.getElementById("fechaInicio").value;
     //Academicos
     var institucion = document.getElementById("institucion").value;
@@ -119,7 +118,6 @@ function anterior(){
     anteriorBarra();
     cant-=100;
     avanzar();
-    console.log(section);   
 }
 function visibilidad(){
     if(cant == 300){
@@ -150,7 +148,6 @@ function visibilidad(){
     //Retroceder
     function anteriorBarra(){
         section-=1;
-        console.log(section)
         barra[section].style.width = "0%";
         if(section > 0){
             barra[section-1].style.background="linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)";       

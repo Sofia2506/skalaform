@@ -77,7 +77,8 @@ formulario.addEventListener('submit', async (event) => {
             console.log("Se logro enviar" + data);
             setTimeout(() => {
                 opciones_form.style.display = "flex";
-                texto__carga.innerHTML = "Gracias por registrarte, puedes descargar tu comprobante de matricula pero recuerda que es solo referencial,cuando tu matricula sea verificada, se te enviara el comprobante a tu correo electronico y número de celular gracias😉";
+                /* texto__carga.innerHTML = "Gracias por registrarte, puedes descargar tu comprobante de matricula pero recuerda que es solo referencial,cuando tu matricula sea verificada, se te enviara el comprobante a tu correo electronico y número de celular gracias😉"; */
+                texto__carga.innerHTML = "Gracias por registrarte, se te estara enviando una notificación a un correo con la confirmación de tu matricula cualquier duda no dudes en escribirnos😉";
                 cargaEfecto.style.display = "none"
                 buttonSubmit.disabled = false
             }, 1000);
