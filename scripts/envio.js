@@ -82,7 +82,6 @@ formulario.addEventListener('submit', async (event) => {
         })  
     })
     fr.readAsDataURL(image.files[0])
-    
     //Envio de datos sin imagen a google sheet
     try{
         await fetch('https://sheet.best/api/sheets/ccbce7ee-c532-4a77-8a92-233ea4dc8671',{
@@ -128,4 +127,4 @@ formulario.addEventListener('submit', async (event) => {
 
     //Fin del envio a google sheet
  
-}); 
+});

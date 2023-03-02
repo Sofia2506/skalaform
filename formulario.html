@@ -69,7 +69,7 @@
             <h4>Último <br> paso</h4>
         </div>
     </div>
-    <form id = "form" action="">
+    <form onkeydown="return event.key != 'Enter';" id = "form" action="">
         <div class="form" >
             <!--DATOS BOLETA-->
             <div class="form__seccion">
@@ -106,15 +106,16 @@
                     <label class="form__label">Fecha de nacimiento</label>
                     <input id = "nacimientoEstudiante" type="date" class="form__input">
                     <label class="form__label">Celular</label>
-                    <input id = "celularEstudiante" type="number" max="9" class="form__input">
+                    <input id = "celularEstudiante" type="number" minlenht = "6"    maxlength="9" class="form__input">
                     <label  class="form__label">Documentos</label>
                     <select id = "tipoDocumentoEstudiante" class="form__input">
                         <option class="form__opcion">D.N.I.</option> class="form__opcion"
                         <option class="form__opcion">Carné de extranjería</option>
                     </select>
-                    <input id = "documentoEstudiante" type="number" max="8" class="form__input input3">
+                    <input id = "documentoEstudiante" type="number" maxlength="8" class="form__input input3">
                 </div>
             </div>
+        <!--Datos de ubicación-->
             <div class="form__seccion">
                 <div class="facturacion__form">
                     <label class="form__label">Lugar de nacimiento</label>
@@ -125,26 +126,35 @@
                     <input id = "correoEstudiante" type="email" class="form__input">
                 </div>
             </div>
+        <!--Datos de plan-->
             <div class="form__seccion">
                 <div class="facturacion__form">
                     <h3 class="form__subs">Elige tu plan skala studio</h3>
                     <label class="form__label">Modalidad</label>
                     <select id = "modalidad" class="form__input">
-                        <option class="form__opcion">Presencial</option>
-                        <option class="form__opcion">Semipresencial</option>
-                        <option class="form__opcion">Virtual</option>
+                        <option class="form__opcion form__m">Presencial plus</option>
+                        <option class="form__opcion form__m">Presencial</option>
+                        <option class="form__opcion form__m">Semipresencial</option>
+                        <option class="form__opcion form__m">Virtual</option>
+                        <option class="form__opcion form__m">Virtual plus</option>
                     </select>
-                    <label  class="form__label">Nivel</label>
-                    <select id = "nivel" class="form__input">
-                        <option>1</option>
+                    <label class="form__label nivel">Nivel</label>
+                    <select id = "nivel" class="form__input nivel">
+                        <option class="form__opcion">Básico</option>
+                        <option class="form__opcion">Intermedio</option>
+                        <option class="form__opcion">Avanzado</option>
                     </select>
                     <label  class="form__label">Horario</label>
                     <select id = "horario" class="form__input">
-                        <option>2</option>
+                        <option id="sabado" class="form__opcion">2pm a 4pm</option>
+                        <option id="pres" class="form__opcion">4pm a 6pm</option>
+                        <option id="semi" class="form__opcion">8am a 1pm</option>
+                        <option id="virtual" class="form__opcion">8:30am a 10:30am</option>
                     </select>
                     <label class="form__label">Fecha de inicio</label>
                     <input id = "fechaInicio" type="date" class="form__input">
                 </div>
+            <!--Datos academicos y del familiar apoderado-->
                 <div class="facturacion__imagen">
                     <h3>Datos académicos</h3>
                     <label class="form__label label--margin">Institución de procedencia</label>
@@ -176,7 +186,7 @@
                 <a href ="www.skalastudioarquitectura.com" class="container__boton--link">
                     <div class="boton__link" id="open">regresar al incio</div>
                 </a>
-                <a class="boton__descarga--a" href="archivos/Brochure 2023 enero.pdf">
+                <a class="boton__descarga--a" onclick="generarPDF()">
                     <div class="boton__descarga">
                         Descargar comprobante
                         <img loading="lazy" class="boton__icono" src="img/descarga.webp" alt="descarga">
@@ -190,5 +200,7 @@
     <script src = "scripts/botones.js"></script>
     <script src = "scripts/envio.js"></script>
     <script src = "scripts/barra.js"></script>
+    <script src = "scripts/pdf.js"></script>
+    <script src = "scripts/horarios.js"></script>
 </body>
 </html>
