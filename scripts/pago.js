@@ -18,6 +18,6 @@ tipoPago.addEventListener("change", function() {
     }
     else{
         console.log("Deposito");
-        img.src = "img/deposito.png";
+        img.src = "img/cuentas.png";
     }
 });

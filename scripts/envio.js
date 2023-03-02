@@ -23,6 +23,9 @@ var opciones_form = document.getElementById("opciones__form");
 
 formulario.addEventListener('submit', async (event) => {
     loader.style.display = "flex";
+    var html = document.getElementById("html");
+    window.scrollTo(0, 0);
+    html.style.overflow = "hidden";
     console.log("se presiono el boton enviar")
     confirm == true ;
     //Recolección de datos
@@ -78,7 +81,7 @@ formulario.addEventListener('submit', async (event) => {
             setTimeout(() => {
                 opciones_form.style.display = "flex";
                 /* texto__carga.innerHTML = "Gracias por registrarte, puedes descargar tu comprobante de matricula pero recuerda que es solo referencial,cuando tu matricula sea verificada, se te enviara el comprobante a tu correo electronico y número de celular gracias😉"; */
-                texto__carga.innerHTML = "Gracias por registrarte, se te estara enviando una notificación a un correo con la confirmación de tu matricula cualquier duda no dudes en escribirnos😉";
+                texto__carga.innerHTML = "Gracias por registrarte, se te estara enviando una notificación a un correo con la confirmación de tu matricula cualquier duda no dudes en escribirnos 😉";
                 cargaEfecto.style.display = "none"
                 buttonSubmit.disabled = false
             }, 1000);
