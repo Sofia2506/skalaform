@@ -1,3 +1,6 @@
+html{
+  overflow-x: hidden;
+}
 .iconos-conteiner,.textos-conteiner,.barra-conteiner{
     margin-left:auto;
     margin-right:auto;
@@ -15,11 +18,12 @@
       text-align: center;
       margin: 0;
       font-family: $parrafo;
+      left:4vw;
     }
   }
   .estado-img{
     position: relative;
-    left: -25px;
+    left: calc( 15vw - 25px);
     height: 50%;
     margin: 4px;
     filter: invert(86%) sepia(1%) saturate(1739%) hue-rotate(221deg) brightness(113%) contrast(69%);
@@ -33,6 +37,7 @@
   .barras-conteiner{
     width: 100%;
     height: 100%;
+    left: 15vw  ;
     position: relative;
   }
   .barra-gris{
@@ -48,7 +53,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 90vw;
-    left: 15vw;
+   /*  left: 15vw; */
     position: relative;
   }
   .barra{ 

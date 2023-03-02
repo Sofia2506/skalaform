@@ -132,24 +132,32 @@
                     <h3 class="form__subs">Elige tu plan skala studio</h3>
                     <label class="form__label">Modalidad</label>
                     <select id = "modalidad" class="form__input">
-                        <option class="form__opcion form__m">Presencial plus</option>
-                        <option class="form__opcion form__m">Presencial</option>
-                        <option class="form__opcion form__m">Semipresencial</option>
-                        <option class="form__opcion form__m">Virtual</option>
-                        <option class="form__opcion form__m">Virtual plus</option>
+                        <option class="form__opcion">Virtual</option>
+                        <option class="form__opcion">Virtual plus</option>
+                        <option class="form__opcion">Presencial plus</option>
+                        <option class="form__opcion">Presencial</option>
+                        <option class="form__opcion">Semipresencial</option>
                     </select>
-                    <label class="form__label nivel">Nivel</label>
-                    <select id = "nivel" class="form__input nivel">
-                        <option class="form__opcion">Básico</option>
-                        <option class="form__opcion">Intermedio</option>
-                        <option class="form__opcion">Avanzado</option>
+                    <label  id = "nivel__label" class="form__label">Nivel</label>
+                    <select id = "nivel" class="form__input">
+                        <option class="form__opcion" >Básico</option>
+                        <option class="form__opcion" >Intermedio</option>
+                        <option class="form__opcion" >Avanzado</option>
                     </select>
                     <label  class="form__label">Horario</label>
                     <select id = "horario" class="form__input">
-                        <option id="sabado" class="form__opcion">2pm a 4pm</option>
-                        <option id="pres" class="form__opcion">4pm a 6pm</option>
-                        <option id="semi" class="form__opcion">8am a 1pm</option>
-                        <option id="virtual" class="form__opcion">8:30am a 10:30am</option>
+                        <!--Opciones que si es tal así sera su horario
+                        Presencial plus(dos opciones) -> 2:00 - 4:00pm L a S
+                                                        4:00 - 6:00pm L a V y el S de 2:00 a 4:00pm
+                        Presencial (dos opciones)-> 2:00- 4:00 pm L 
+                                                4:00 - 6:00 pm L a V
+
+                        Semi presencial -> 8:00 a 1pm sábado presencial
+                                            8:00 a 1pm presencial virtual
+                        Virtual todos los niveles -> 8:30 a 10:30pm L a V
+                        virtual plus lo mismo de arriba y sábado de 2 a 4 virtual
+                        -->
+                        <option class="form__opcion" >8:30 a 10:30pm L a V</option>
                     </select>
                     <label class="form__label">Fecha de inicio</label>
                     <input id = "fechaInicio" type="date" class="form__input">
@@ -167,15 +175,15 @@
             </div>
         </div>
         <div class="botones" id="botones">
-            <a id="anterior" class="form__boton boton--right" onclick="anterior();retroceder()">Anterior</a>
-            <button type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form" value="Enviar">Enviar</button>
-            <a id="siguiente" class="form__boton boton--left" onclick="siguiente();proceder()">Siguiente</a>
+            <a id="anterior" class="form__boton boton--right" onclick="anterior()">Anterior</a>
+            <button type="submit" id="enviar" class="inscripcion__boton boton--enviar boton--form"  value="Enviar">Enviar</button>
+            <a id="siguiente" class="form__boton boton--left" onclick="siguiente()">Siguiente</a>
         </div>
     </form>
     <!--Loader de formulario final final final final ya me canse, tengo sueño-->
     <div id = "carga" class = "carga">
         <div class="carga__img">
-            <img id = "img__carga" class = "img__carga" src="../img/icono-web-lampara.ico" alt="">
+            <img id = "img__carga" class = "img__carga" src="img/icono-web-lampara.ico" alt="">
             <div id = "carga__efecto" class="carga__efecto"></div>
         </div><br>
         <div class = "carga__info">
@@ -186,12 +194,12 @@
                 <a href ="www.skalastudioarquitectura.com" class="container__boton--link">
                     <div class="boton__link" id="open">regresar al incio</div>
                 </a>
-                <a class="boton__descarga--a" onclick="generarPDF()">
+             <!--    <a class="boton__descarga--a" href="archivos/Brochure 2023 enero.pdf">
                     <div class="boton__descarga">
                         Descargar comprobante
                         <img loading="lazy" class="boton__icono" src="img/descarga.webp" alt="descarga">
                     </div>
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
@@ -199,8 +207,7 @@
     <script src = "scripts/pago.js"></script>
     <script src = "scripts/botones.js"></script>
     <script src = "scripts/envio.js"></script>
-    <script src = "scripts/barra.js"></script>
     <script src = "scripts/pdf.js"></script>
-    <script src = "scripts/horarios.js"></script>
+    <script src = "scripts/modalidad.js"></script>
 </body>
 </html>
