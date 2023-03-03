@@ -131,6 +131,7 @@ function siguiente(){
     cambiarTexto();
 }
 
+
 function anterior(){
     anteriorBarra();
     cant-=100;
