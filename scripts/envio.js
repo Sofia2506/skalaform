@@ -47,6 +47,10 @@ formulario.addEventListener('submit', async (event) => {
     else{//se envian los datos y carga
         buttonSubmit.disabled = false; 
         loader.style.display = "flex";
+        //pa ponerle al centro
+        var html = document.getElementById("html");
+        window.scrollTo(0, 0);
+        html.style.overflow = "hidden";
         confirm == true;
         //Recolección de datos
         //Datos de boleta
