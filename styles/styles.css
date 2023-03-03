@@ -2479,6 +2479,7 @@ hr {
 .facturacion__imagen {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5px;
 }
 .facturacion__form {
   display: grid;
@@ -2654,7 +2655,7 @@ html {
 }
 
 .barrita {
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
   width: 90vw;

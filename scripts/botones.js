@@ -9,35 +9,38 @@ var facturacion = document.getElementById("form__text__facturacion")
 var datosPersonales = document.getElementById("form__text__datosPersonales")
 var datosUbicacion = document.getElementById("form__text__datosUbicacion")
 var datosFinales= document.getElementById("form__text__ultimo")
-
-
+//Responsive
+var viewport700 = window.matchMedia("(max-width: 700px)");
+var viewport900 = window.matchMedia("(max-width: 900px)");
 
 function cambiarTexto(){
     console.log("Entramos a cambiar texto")
-    if(section == 0){
-        facturacion.style.display = "block";
-        datosPersonales.style.display = "none";
-        datosUbicacion.style.display = "none";
-        datosFinales.style.display = "none";
-    }
-    else if(section == 1){
-        facturacion.style.display = "none";
-        datosPersonales.style.display = "block";
-        datosUbicacion.style.display = "none";
-        datosFinales.style.display = "none";
-    }
-    else if(section == 2){
-        console.log("Estamos cambiando el texto de la sección 2")
-        facturacion.style.display = "none";
-        datosPersonales.style.display = "none";
-        datosUbicacion.style.display = "block";
-        datosFinales.style.display = "none";
-    }
-    else {
-        facturacion.style.display = "none";
-        datosPersonales.style.display = "none";
-        datosUbicacion.style.display = "none";
-        datosFinales.style.display = "block";
+    if(viewport.matches){
+        if(section == 0){
+                facturacion.style.display = "block";
+                datosPersonales.style.display = "none";
+                datosUbicacion.style.display = "none";
+            datosFinales.style.display = "none";
+        }
+        else if(section == 1){
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "block";
+            datosUbicacion.style.display = "none";
+            datosFinales.style.display = "none";
+        }
+        else if(section == 2){
+            console.log("Estamos cambiando el texto de la sección 2")
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "none";
+            datosUbicacion.style.display = "block";
+            datosFinales.style.display = "none";
+        }
+        else {
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "none";
+            datosUbicacion.style.display = "none";
+            datosFinales.style.display = "block";
+        }
     }
     
 }
@@ -45,11 +48,13 @@ function cambiarTexto(){
 function avanzar(){
     for(let i = 0 ; i<pregunta.length; i++){
         pregunta[i].style.transform="translateX(-"+cant+"%)";
-        if( i != section){
-            pregunta[i].style.height  = "0px";
-        }
-        else {
-            pregunta[i].style.height = "auto";
+        if(viewport900.matches){
+            if( i != section ){
+                pregunta[i].style.height  = "0px";
+            }
+            else {
+                pregunta[i].style.height = "auto";
+            }
         }
     }
     visibilidad();
@@ -76,10 +81,6 @@ function siguiente(){
             avanzar(); 
             //cambio de texto de la sección del form
             console.log(section)
-            facturacion.style.display = "none";
-            datosPersonales.style.display = "block";
-            datosUbicacion.style.display = "none";
-            datosFinales.style.display = "none";
         /* } */
     }
     else if(section ==1){
@@ -107,11 +108,6 @@ function siguiente(){
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
-            //cambio de texto del form
-            facturacion.style.display = "none";
-            datosPersonales.style.display = "none";
-            datosUbicacion.style.display = "block";
-            datosFinales.style.display = "none";
         /* } */
     }
     else if(section == 2){
@@ -132,13 +128,9 @@ function siguiente(){
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
-            //Cambio del texto del form
-            facturacion.style.display = "none";
-            datosPersonales.style.display = "none";
-            datosUbicacion.style.display = "none";
-            datosFinales.style.display = "block";
       /*   } */
     }
+    cambiarTexto();
 }
         //Verificación final del boton submit 
 /* var buttonSubmit = document.getElementById('enviar');
