@@ -4,8 +4,43 @@ var prev = document.getElementById("anterior");
 var next = document.getElementById("siguiente");
 var enviar = document.getElementById("enviar");
 var section = 0;
+//empezamos con el responsive para el texto
+var facturacion = document.getElementById("form__text__facturacion")
+var datosPersonales = document.getElementById("form__text__datosPersonales")
+var datosUbicacion = document.getElementById("form__text__datosUbicacion")
+var datosFinales= document.getElementById("form__text__ultimo")
 
 
+
+function cambiarTexto(){
+    console.log("Entramos a cambiar texto")
+    if(section == 0){
+        facturacion.style.display = "block";
+        datosPersonales.style.display = "none";
+        datosUbicacion.style.display = "none";
+        datosFinales.style.display = "none";
+    }
+    else if(section == 1){
+        facturacion.style.display = "none";
+        datosPersonales.style.display = "block";
+        datosUbicacion.style.display = "none";
+        datosFinales.style.display = "none";
+    }
+    else if(section == 2){
+        console.log("Estamos cambiando el texto de la sección 2")
+        facturacion.style.display = "none";
+        datosPersonales.style.display = "none";
+        datosUbicacion.style.display = "block";
+        datosFinales.style.display = "none";
+    }
+    else {
+        facturacion.style.display = "none";
+        datosPersonales.style.display = "none";
+        datosUbicacion.style.display = "none";
+        datosFinales.style.display = "block";
+    }
+    
+}
 //Fin de cosas de la barra
 function avanzar(){
     for(let i = 0 ; i<pregunta.length; i++){
@@ -39,6 +74,12 @@ function siguiente(){
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
+            //cambio de texto de la sección del form
+            console.log(section)
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "block";
+            datosUbicacion.style.display = "none";
+            datosFinales.style.display = "none";
         /* } */
     }
     else if(section ==1){
@@ -66,6 +107,11 @@ function siguiente(){
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
+            //cambio de texto del form
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "none";
+            datosUbicacion.style.display = "block";
+            datosFinales.style.display = "none";
         /* } */
     }
     else if(section == 2){
@@ -86,6 +132,11 @@ function siguiente(){
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
+            //Cambio del texto del form
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "none";
+            datosUbicacion.style.display = "none";
+            datosFinales.style.display = "block";
       /*   } */
     }
 }
@@ -118,6 +169,8 @@ function anterior(){
     anteriorBarra();
     cant-=100;
     avanzar();
+    cambiarTexto();
+    console.log("Anterior, ahora estas en section : "+section)
 }
 function visibilidad(){
     if(cant == 300){

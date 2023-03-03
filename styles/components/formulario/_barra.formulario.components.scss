@@ -12,7 +12,6 @@ html{
   }
   .textos-conteiner{
     h4{
-      left: -50%;
       height: 50%;
       position: relative;
       text-align: center;
@@ -126,8 +125,23 @@ html{
   }
 //580px
 @media (max-width: 700px)  {
+  .barrita{
+    margin:0;
+  }
   .textos-conteiner {
-    display: none;
+    margin: 20px;
     position: relative;
+    display: flex;
+    h4{
+      display: none;
+      width: 100%;
+      br {
+        display: none;
+      }
+    }
+
+  }
+  #form__text__facturacion{
+    display: block;
   }
 }
