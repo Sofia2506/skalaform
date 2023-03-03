@@ -96,20 +96,3 @@ modalidad.addEventListener("change", function(){
     }
 
 })
-/* 
-
-if preencial normal
-
-if 
-Semi presencial 
-
-
-
-if virtual
-nivel active 
-horario disable pero muestra -> 8:30 a 10:30pm L a V 
-
-if virtual Plus
-nivel active
-horario disable pero muestra-> lo de arriba más  sábado de 2 a 4 virtual
- */

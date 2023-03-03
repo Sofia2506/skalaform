@@ -5,13 +5,12 @@ var next = document.getElementById("siguiente");
 var enviar = document.getElementById("enviar");
 var section = 0;
 
-
 //Fin de cosas de la barra
 function avanzar(){
     for(let i = 0 ; i<pregunta.length; i++){
         pregunta[i].style.transform="translateX(-"+cant+"%)";
         if( i != section){
-            pregunta[i].style.height  = "0px";
+            pregunta[i].style.height  = "300px";
         }
         else {
             pregunta[i].style.height = "auto";
@@ -21,33 +20,33 @@ function avanzar(){
 }
 function siguiente(){
     console.log(section);
-    if(section == 0){
+     if(section == 0){
         let image = document.getElementById("file").value;
         var nombreBoleta = document.getElementById("nombreBoleta").value;
         //is value esta vacio entones reviso lo manda a su casa y luego peude llenar el form otar vez.
-     /*    var documentoBoleta = document.getElementById("documentoBoleta").value;
+        var documentoBoleta = document.getElementById("documentoBoleta").value;
         if(image == ""){
-            alert("Ingesa una imagen de su comprobante");
+            alert("Ingrese una imagen de su comprobante");
         }
         else if(nombreBoleta ==""){
-            alert("Inrgese el nombre para su boleta");
+            alert("Ingrese el nombre para su boleta");
         }
         else if(documentoBoleta == ""){
             alert("Ingrese el número de documento de su boleta");
         }
-        else{ */
+        else{
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
-        /* } */
+        }
     }
-    else if(section ==1){
+    else if(section == 1){
         var apellidoEstudiante = document.getElementById("apellidoEstudiante").value;
         var nombreEstudiante = document.getElementById("nombreEstudiante").value;
         var nacimientoEstudiante = document.getElementById("nacimientoEstudiante").value;
         var celularEstudiante = document.getElementById("celularEstudiante").value;
         var documentoEstudiante = document.getElementById("documentoEstudiante").value;
-/*         if(nombreEstudiante == ""){
+        if(nombreEstudiante == ""){
             alert("Ingrese el nombre del estudiante");
         }
         else if(apellidoEstudiante == ""){
@@ -62,57 +61,33 @@ function siguiente(){
         else if(documentoEstudiante == ""){
             alert("Ingrese el número de documento del estudiante");
         }
-        else{ */
+        else{
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
-        /* } */
+        }
     }
     else if(section == 2){
         var lugarNacimientoEstudiante = document.getElementById("lugarNacimientoEstudiante").value;
         var direccionEstudiante = document.getElementById("direccionEstudiante").value;
         var correoEstudiante = document.getElementById("correoEstudiante").value;
-/* 
+
         if(lugarNacimientoEstudiante == ""){
             alert("Ingrese el lugar de nacimiento del estudiante");
         }
         else if(direccionEstudiante ==""){
-            alert("Ingrese la direccion del estudiante");
+            alert("Ingrese la dirección del estudiante");
         }
         else if(correoEstudiante == ""){
-            alert("Ingrese el corero del estudiante");
+            alert("Ingrese el correo del estudiante");
         }
-        else{ */
+        else{ 
             cant+=100;
             siguienteBarra(); 
             avanzar(); 
-      /*   } */
+        }  
     }
 }
-        //Verificación final del boton submit 
-/* var buttonSubmit = document.getElementById('enviar');
-buttonSubmit.addEventListener('click',function(){
-    var fechaInicio = document.getElementById("fechaInicio").value;
-    //Academicos
-    var institucion = document.getElementById("institucion").value;
-    var nombreRepresentante   = document.getElementById("nombreRepresentante").value;  
-    var apellidoRepresentante = document.getElementById("apellidoRepresentante").value;
-
-    if(fechaInicio == ""){
-        alert("Ingrese la fecha cuando iniciara sus clases");
-        buttonSubmit.disabled = true;
-    }
-    else if(institucion == ""){
-        alert("Ingrese la institución de procedencia");
-    }
-    else if(nombreRepresentante == ""){
-        alert("Ingrese el nombre del apoderado");
-    }
-    else if(apellidoRepresentante == ""){
-        alert("Ingrese el apellido del apoderado");
-    }   
-    buttonSubmitl.disabled = false; 
-})*/
 
 function anterior(){
     anteriorBarra();
