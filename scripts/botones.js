@@ -132,30 +132,7 @@ function siguiente(){
     }
     cambiarTexto();
 }
-        //Verificación final del boton submit 
-/* var buttonSubmit = document.getElementById('enviar');
-buttonSubmit.addEventListener('click',function(){
-    var fechaInicio = document.getElementById("fechaInicio").value;
-    //Academicos
-    var institucion = document.getElementById("institucion").value;
-    var nombreRepresentante   = document.getElementById("nombreRepresentante").value;  
-    var apellidoRepresentante = document.getElementById("apellidoRepresentante").value;
 
-    if(fechaInicio == ""){
-        alert("Ingrese la fecha cuando iniciara sus clases");
-        buttonSubmit.disabled = true;
-    }
-    else if(institucion == ""){
-        alert("Ingrese la institución de procedencia");
-    }
-    else if(nombreRepresentante == ""){
-        alert("Ingrese el nombre del apoderado");
-    }
-    else if(apellidoRepresentante == ""){
-        alert("Ingrese el apellido del apoderado");
-    }   
-    buttonSubmitl.disabled = false; 
-})*/
 
 function anterior(){
     anteriorBarra();

@@ -76,7 +76,7 @@
                 <div class="facturacion__imagen">
                     <img src="img/cuentas.png" id="pago-imagen" class="form__img">
                     <div class="inscripcion__boton boton--form boton--subir">
-                        <input type="file" accept="image/png, .jpeg, .jpg" id="file">
+                        <input type="file" accept="image/png, .jpeg, .jpg" enterkeyhint="done" id="file">
                     </div>
                     <div id="file-content" class="pago-notificacion"></div>
                 </div>
@@ -87,43 +87,43 @@
                         <option class="form__opcion">Yape</option>
                     </select>
                     <label class="form__label">¿A nombre de quién va la boleta?</label> 
-                    <input type="text" class="form__input" maxlength="50" id="nombreBoleta">
+                    <input type="text" class="form__input" enterkeyhint="done" maxlength="50" id="nombreBoleta">
                     <label class="form__label">Tipo de documento</label> 
                     <select id = "TipoDocumentoBoleta" class="form__input">
                         <option class="form__opcion">D.N.I.</option>
                         <option class="form__opcion">Carne de extranjería</option>
                     </select>
                     <label class="form__label">Documento</label>
-                    <input id = "documentoBoleta" type="number" maxlength="8" class="form__input">
+                    <input id = "documentoBoleta" type="number" maxlength="8" class="form__input" enterkeyhint="done" >
                 </div>
             </div>
             <!--DATOS PERSONALES-->
             <div class="form__seccion">
                 <div class="personales__form">
                     <label class="form__label">Nombres y Apellidos</label>
-                    <input id = "apellidoEstudiante" type="text" class="form__input" placeholder="Apellidos">
-                    <input id = "nombreEstudiante" type="text" class="form__input input3" placeholder="Nombres">
+                    <input id = "apellidoEstudiante" type="text" class="form__input" placeholder="Apellidos" enterkeyhint="done" >
+                    <input id = "nombreEstudiante" type="text" class="form__input input3" placeholder="Nombres" enterkeyhint="done">
                     <label class="form__label">Fecha de nacimiento</label>
-                    <input id = "nacimientoEstudiante" type="date" class="form__input">
+                    <input id = "nacimientoEstudiante" type="date" class="form__input" enterkeyhint="done">
                     <label class="form__label">Celular</label>
-                    <input id = "celularEstudiante" type="number" minlenht = "6"    maxlength="9" class="form__input">
+                    <input id = "celularEstudiante" type="number" minlenht = "6"    maxlength="9" class="form__input" enterkeyhint="done">
                     <label  class="form__label">Documentos</label>
                     <select id = "tipoDocumentoEstudiante" class="form__input">
                         <option class="form__opcion">D.N.I.</option> class="form__opcion"
                         <option class="form__opcion">Carné de extranjería</option>
                     </select>
-                    <input id = "documentoEstudiante" type="number" maxlength="8" class="form__input input3">
+                    <input id = "documentoEstudiante" type="number" maxlength="8" class="form__input input3" enterkeyhint="done">
                 </div>
             </div>
         <!--Datos de ubicación-->
             <div class="form__seccion">
                 <div class="facturacion__form">
                     <label class="form__label">Lugar de nacimiento</label>
-                    <input id = "lugarNacimientoEstudiante" type="text" class="form__input">
+                    <input id = "lugarNacimientoEstudiante" type="text" class="form__input" enterkeyhint="done">
                     <label class="form__label">Dirección domiciliaria</label>
-                    <input id = "direccionEstudiante" type="text" class="form__input">
+                    <input id = "direccionEstudiante" type="text" class="form__input" enterkeyhint="done">
                     <label class="form__label">Correo electrónico</label>
-                    <input id = "correoEstudiante" type="email" class="form__input">
+                    <input id = "correoEstudiante" type="email" class="form__input" enterkeyhint="done">
                 </div>
             </div>
         <!--Datos de plan-->
@@ -166,11 +166,11 @@
                 <div class="facturacion__imagen">
                     <h3>Datos académicos</h3>
                     <label class="form__label label--margin">Institución de procedencia</label>
-                    <input type="text" id = "institucion" class="form__input input--margin">
+                    <input type="text" id = "institucion" class="form__input input--margin" enterkeyhint="done">
                     <h3>Datos del familiar apoderado</h3>
                     <label class="form__label label--margin">Nombre y apellido del representante</label>
-                    <input type="text" id = "apellidoRepresentante" class="form__input input--margin" placeholder="Apellidos">
-                    <input type="text" id = "nombreRepresentante" class="form__input" placeholder="Nombres">
+                    <input type="text" id = "apellidoRepresentante" class="form__input input--margin" placeholder="Apellidos" enterkeyhint="done">
+                    <input type="text" id = "nombreRepresentante" class="form__input" placeholder="Nombres" enterkeyhint="done">
                 </div>
             </div>
         </div>

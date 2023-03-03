@@ -246,6 +246,27 @@ input, select {
   text-align: center;
 }
 
+@media screen and (max-width: 1050px) {
+  .seccion__titulo {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .seccion__titulo {
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .seccion__titulo {
+    font-size: 38px;
+  }
+}
+.pointer {
+  cursor: pointer;
+}
+
 .text__disabled {
   color: #808080;
 }
@@ -314,27 +335,6 @@ input, select {
 .boton__link:hover:before, .boton__link:hover:after {
   width: 100%;
   opacity: 0.3;
-}
-
-@media screen and (max-width: 1050px) {
-  .seccion__titulo {
-    font-size: 50px;
-    line-height: 50px;
-  }
-}
-@media screen and (max-width: 540px) {
-  .seccion__titulo {
-    font-size: 42px;
-    line-height: 42px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .seccion__titulo {
-    font-size: 38px;
-  }
-}
-.pointer {
-  cursor: pointer;
 }
 
 .bloque1 {
