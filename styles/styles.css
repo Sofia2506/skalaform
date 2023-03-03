@@ -250,6 +250,10 @@ input, select {
   color: #808080;
 }
 
+.none {
+  display: none;
+}
+
 .boton__descarga {
   padding: 10px;
   margin-bottom: 5px;
@@ -559,7 +563,7 @@ input, select {
     width: auto;
     border: 2.5px solid white;
     border-radius: 5px;
-    background-color: hsla(0deg, 0%, 0%, 0.28);
+    background-color: hsla(0, 0%, 0%, 0.28);
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -2426,7 +2430,7 @@ hr {
   color: black;
 }
 .form__img {
-  height: 280px;
+  width: 300px;
 }
 .form__boton {
   font-family: "PoiretOne";
@@ -2475,6 +2479,7 @@ hr {
 .facturacion__imagen {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5px;
 }
 .facturacion__form {
   display: grid;
@@ -2609,7 +2614,6 @@ html {
 }
 
 .textos-conteiner h4 {
-  left: -50%;
   height: 50%;
   position: relative;
   text-align: center;
@@ -2651,7 +2655,7 @@ html {
 }
 
 .barrita {
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
   width: 90vw;
@@ -2735,9 +2739,23 @@ html {
 }
 
 @media (max-width: 700px) {
+  .barrita {
+    margin: 0;
+  }
   .textos-conteiner {
-    display: none;
+    margin: 20px;
     position: relative;
+    display: flex;
+  }
+  .textos-conteiner h4 {
+    display: none;
+    width: 100%;
+  }
+  .textos-conteiner h4 br {
+    display: none;
+  }
+  #form__text__facturacion {
+    display: block;
   }
 }
 .img__carga {
@@ -2748,7 +2766,8 @@ html {
 
 .carga {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
   flex: 0 0 25%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;

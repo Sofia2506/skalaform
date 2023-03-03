@@ -22,12 +22,12 @@ horarioVirtualPlus.classList.add("form__opcion");
 //----------HORARIOS--------------
 //Presencial  plus
 horarioPresencialPlus_op1.textContent = "2:00 - 4:00pm L a S";
-horarioPresencialPlus_op2.textContent = "4:00 - 6:00pm L a V y el S de 2:00 a 4:00pm";
+horarioPresencialPlus_op2.textContent = "4:00 - 6:00pm L a V y de 2:00 a 4:00pm el S";
 //Presencial
 horarioPresencial_op1.textContent = "2:00 - 4:00 pm L a V ";
 horarioPresencial_op2.textContent = "4:00 - 6:00 pm L a V ";
 //SemiPresencial
-horarioSemiPresencial.textContent = "8:00 - 1:00 pm , S virtual y D presencial";
+horarioSemiPresencial.textContent = "8:00 - 1:00 pm - S virtual/D presencial";
 //Virtual
 horarioVirtual.textContent = " 8:30 a 10:30pm L a V ";
 //VirtualPlus

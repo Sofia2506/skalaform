@@ -44,7 +44,7 @@
         }
     }
     &__img{
-        height: 280px;
+        width: 300px;
     }
     &__boton{
         font-family: $text-font;
@@ -94,6 +94,7 @@
     &__imagen{
         display: flex;
         flex-direction: column;
+        margin-bottom: 5px
     }
     &__form{
         @include grillaForm(2);

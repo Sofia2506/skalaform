@@ -4,16 +4,57 @@ var prev = document.getElementById("anterior");
 var next = document.getElementById("siguiente");
 var enviar = document.getElementById("enviar");
 var section = 0;
+//empezamos con el responsive para el texto
+var facturacion = document.getElementById("form__text__facturacion")
+var datosPersonales = document.getElementById("form__text__datosPersonales")
+var datosUbicacion = document.getElementById("form__text__datosUbicacion")
+var datosFinales= document.getElementById("form__text__ultimo")
+//Responsive
+var viewport700 = window.matchMedia("(max-width: 700px)");
+var viewport900 = window.matchMedia("(max-width: 900px)");
 
+function cambiarTexto(){
+    console.log("Entramos a cambiar texto")
+    if(viewport.matches){
+        if(section == 0){
+                facturacion.style.display = "block";
+                datosPersonales.style.display = "none";
+                datosUbicacion.style.display = "none";
+            datosFinales.style.display = "none";
+        }
+        else if(section == 1){
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "block";
+            datosUbicacion.style.display = "none";
+            datosFinales.style.display = "none";
+        }
+        else if(section == 2){
+            console.log("Estamos cambiando el texto de la sección 2")
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "none";
+            datosUbicacion.style.display = "block";
+            datosFinales.style.display = "none";
+        }
+        else {
+            facturacion.style.display = "none";
+            datosPersonales.style.display = "none";
+            datosUbicacion.style.display = "none";
+            datosFinales.style.display = "block";
+        }
+    }
+    
+}
 //Fin de cosas de la barra
 function avanzar(){
     for(let i = 0 ; i<pregunta.length; i++){
         pregunta[i].style.transform="translateX(-"+cant+"%)";
-        if( i != section){
-            pregunta[i].style.height  = "300px";
-        }
-        else {
-            pregunta[i].style.height = "auto";
+        if(viewport900.matches){
+            if( i != section ){
+                pregunta[i].style.height  = "0px";
+            }
+            else {
+                pregunta[i].style.height = "auto";
+            }
         }
     }
     visibilidad();
@@ -87,12 +128,15 @@ function siguiente(){
             avanzar(); 
         }  
     }
+    cambiarTexto();
 }
 
 function anterior(){
     anteriorBarra();
     cant-=100;
     avanzar();
+    cambiarTexto();
+    console.log("Anterior, ahora estas en section : "+section)
 }
 function visibilidad(){
     if(cant == 300){
