@@ -15,7 +15,7 @@ var viewport900 = window.matchMedia("(max-width: 900px)");
 
 function cambiarTexto(){
     console.log("Entramos a cambiar texto")
-    if(viewport.matches){
+    if(viewport700.matches){
         if(section == 0){
                 facturacion.style.display = "block";
                 datosPersonales.style.display = "none";
@@ -64,10 +64,16 @@ function siguiente(){
      if(section == 0){
         let image = document.getElementById("file").value;
         var nombreBoleta = document.getElementById("nombreBoleta").value;
+        var modalidadPago = document.getElementById("pago").value;
+
         //is value esta vacio entones reviso lo manda a su casa y luego peude llenar el form otar vez.
         var documentoBoleta = document.getElementById("documentoBoleta").value;
+        var NumeroOperacion = document.getElementById("numeroOperacion").value;
         if(image == ""){
             alert("Ingrese una imagen de su comprobante");
+        }
+        else if(NumeroOperacion == "" && modalidadPago != "Yape"){
+            alert("Ingrese el numero de operación");
         }
         else if(nombreBoleta ==""){
             alert("Ingrese el nombre para su boleta");
