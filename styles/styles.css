@@ -2480,6 +2480,7 @@ hr {
   display: flex;
   flex-direction: column;
   margin-bottom: 5px;
+  width: 300px;
 }
 .facturacion__form {
   display: grid;
